@@ -2,6 +2,8 @@
 
 module Link = Next.Link
 
+module Head = Next.Head
+
 module Navigation = {
   @react.component
   let make = () =>
@@ -22,9 +24,14 @@ module Navigation = {
 @react.component
 let make = (~children) => {
   let minWidth = ReactDOM.Style.make(~minWidth="20rem", ())
-  <div style=minWidth >
-    <div >
-      <Navigation /> <main > children </main>
+  <>
+    <Head>
+      <title>{React.string("Rescript - React - NextJS - Trade elements")}</title>
+    </Head>
+    <div style=minWidth >
+      <div >
+        <Navigation /> <main > children </main>
+      </div>
     </div>
-  </div>
+  </>
 }
