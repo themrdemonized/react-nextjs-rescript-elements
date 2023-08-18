@@ -28,7 +28,7 @@
   version "1.0.0"
   resolved "git+https://github.com/4ait/npm_focus_prevent_scroll_polyfill.git#67562463f1ffdbfc7ae00f560a7952058485d89f"
 
-"@4ait/icons_system@git+https://github.com/4ait/npm_icons_system.git#semver:^4":
+"@4ait/icons_system@git+https://github.com/4ait/npm_icons_system.git#semver:^4", "@4ait/icons_system@git+https://github.com/4ait/npm_icons_system.git#semver:^4.1.0":
   version "4.3.0"
   resolved "git+https://github.com/4ait/npm_icons_system.git#f1e7d3c513f4d54373b04bc66f4c9b8bbee9638d"
   dependencies:
@@ -73,6 +73,10 @@
   resolved "git+https://github.com/4ait/npm_trade_fonts.git#7bb5c516c1ee38f7894cac10d50ddc35a18d3f0b"
   dependencies:
     "@4ait/scss_fonts_expansion" "git+https://github.com/4ait/npm_scss_fonts_expansion.git#semver:^1"
+
+"@4ait/trade_style_palette@git+https://github.com/4ait/npm_trade_style_palette.git#semver:^1":
+  version "1.0.0"
+  resolved "git+https://github.com/4ait/npm_trade_style_palette.git#921518e5a0f855a7d772c324b634b0003c1e98e2"
 
 "@babel/parser@^7.20.15", "@babel/parser@^7.21.3":
   version "7.22.10"

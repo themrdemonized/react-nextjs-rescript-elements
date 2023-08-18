@@ -46,12 +46,12 @@ let make = (
       React.null
   }
 
-  let slotEl: React.element = switch (iconSingleSlot, iconDouble1Slot, iconWithTextSlot) {
-    | (Some(t), _, _) =>
+  let slotEl: React.element = switch (iconSingleSlot, iconDouble1Slot) {
+    | (Some(t), _,) =>
     <div className={styles["icon-single"]}>
       {t}
     </div>
-    | (_, Some(t), _) =>
+    | (_, Some(t)) =>
       switch (iconDouble2Slot) {
         | Some(y) =>
           <>
@@ -67,14 +67,22 @@ let make = (
             {t}
           </div>
       }
-    | (_, _ , Some(t)) =>
-      <div className={styles["icon-with-text"]}>
-        {t}
-      </div>
-    | (_, _, _) =>
-      <div className={styles["text"]}>
-        {React.string(value)}
-      </div>
+    | (_, _) => 
+      switch iconWithTextSlot {
+        | Some(t) =>
+          <>
+            <div className={styles["icon-with-text"]}>
+              {t}
+            </div>
+            <div className={styles["text"]}>
+              {React.string(value)}
+            </div>
+          </>
+        | None => 
+          <div className={styles["text"]}>
+            {React.string(value)}
+          </div>
+      }
   }
 
   let handleClick = (e) => {

@@ -65,9 +65,11 @@ function ButtonComponent(props) {
             className: styles["icon-double"]
           }, t);
   } else {
-    slotEl = iconWithTextSlot !== undefined ? React.createElement("div", {
-            className: styles["icon-with-text"]
-          }, Caml_option.valFromOption(iconWithTextSlot)) : React.createElement("div", {
+    slotEl = iconWithTextSlot !== undefined ? React.createElement(React.Fragment, undefined, React.createElement("div", {
+                className: styles["icon-with-text"]
+              }, Caml_option.valFromOption(iconWithTextSlot)), React.createElement("div", {
+                className: styles.text
+              }, value$1)) : React.createElement("div", {
             className: styles.text
           }, value$1);
   }
