@@ -73,6 +73,7 @@ let make = (
   <>
     <div
       className={cx([
+        "foura__trade_elements__elements_palette",
         style["root"],
         typeSize === 'L' ? style["large"] : "",
         typeSize === 'S' ? style["small"] : "",

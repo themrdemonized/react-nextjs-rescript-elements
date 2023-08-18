@@ -66,6 +66,7 @@ function ButtonComponent(props) {
   }
   return React.createElement(React.Fragment, undefined, React.createElement("div", {
                   className: Cx.cx([
+                        "foura__trade_elements__elements_palette",
                         style.root,
                         typeSize$1 === /* 'L' */76 ? style.large : "",
                         typeSize$1 === /* 'S' */83 ? style.small : "",
