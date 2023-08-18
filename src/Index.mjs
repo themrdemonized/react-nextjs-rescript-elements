@@ -78,6 +78,17 @@ function $$default(param) {
                     marginBottom: "16px"
                   }
                 }), React.createElement(ButtonComponent.make, {
+                  value: "forceActive is " + String(count) + "",
+                  forceActive: true,
+                  onClick: (function (param) {
+                      Curry._1(setCount, (function (count) {
+                              return count + 1 | 0;
+                            }));
+                    }),
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(ButtonComponent.make, {
                   type_: "text",
                   value: "Hidden div count is " + String(count) + "",
                   onClick: (function (param) {

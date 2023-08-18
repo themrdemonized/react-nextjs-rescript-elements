@@ -39,6 +39,12 @@ let default = () => {
     />
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
+      forceActive=true
+      value={`forceActive is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
       value={`Hidden div count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
       type_="text"
