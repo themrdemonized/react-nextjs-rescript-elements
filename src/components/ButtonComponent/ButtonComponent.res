@@ -1,20 +1,25 @@
-%%private(@module("./ButtonComponent.module.scss") external style: {..} = "default")
+%%private(@module("./ButtonComponent.module.scss") external styles: {..} = "default")
 @send external blur: Dom.element => unit = "blur"
+
+type typeSizes = L | S | M
+type typeColors = Primary | Secondary | Tertiary
 
 @react.component
 let make = (
   ~type_: option<string>=?,
   ~value: string="",
   ~name: string="",
-  ~onClick,
-  ~typeSize: char='M',
-  ~typeColor: string="Primary",
+  ~typeSize: typeSizes=M,
+  ~typeColor: typeColors=Primary,
   ~disabled: bool=false,
   ~forceActive: bool=false,
   ~iconWithTextSlot: option<React.element>=?,
   ~iconSingleSlot: option<React.element>=?,
   ~iconDouble1Slot: option<React.element>=?,
   ~iconDouble2Slot: option<React.element>=?,
+  ~onClick,
+  ~style: ReactDOM.Style.t=ReactDOM.Style.make(()),
+  ~className = ""
   ) => {
   let main = React.useRef(Js.Nullable.null)
   let input = React.useRef(Js.Nullable.null)
@@ -33,7 +38,7 @@ let make = (
         type_={t}
         name={name}
         value={value}
-        className={style["hidden-input"]}
+        className={styles["hidden-input"]}
       />
     | None =>
       React.null
@@ -41,61 +46,62 @@ let make = (
 
   let slotEl: React.element = switch (iconSingleSlot, iconDouble1Slot, iconWithTextSlot) {
     | (Some(t), _, _) =>
-    <div className={style["icon-single"]}>
+    <div className={styles["icon-single"]}>
       {t}
     </div>
     | (_, Some(t), _) =>
       switch (iconDouble2Slot) {
         | Some(y) =>
           <>
-            <div className={style["icon-double"]}>
+            <div className={styles["icon-double"]}>
               {t}
             </div>
-            <div className={style["icon-double"]}>
+            <div className={styles["icon-double"]}>
               {y}
             </div>
           </>
         | None =>
-          <div className={style["icon-double"]}>
+          <div className={styles["icon-double"]}>
             {t}
           </div>
       }
     | (_, _ , Some(t)) =>
-      <div className={style["icon-with-text"]}>
+      <div className={styles["icon-with-text"]}>
         {t}
       </div>
     | (_, _, _) =>
-      <div className={style["text"]}>
+      <div className={styles["text"]}>
         {React.string(value)}
       </div>
   }
-
   <>
     <div
       className={cx([
         "foura__trade_elements__elements_palette",
-        style["root"],
-        typeSize === 'L' ? style["large"] : "",
-        typeSize === 'S' ? style["small"] : "",
-        iconWithTextSlot !== None ? style["root-with-icon"] : "",
-        iconSingleSlot !== None ? style["root-with-icon-single"] : "",
-        iconDouble1Slot !== None ? style["root-with-icon-double"] : "",
+        styles["root"],
+        typeSize === L ? styles["large"] : "",
+        typeSize === S ? styles["small"] : "",
+        iconWithTextSlot !== None ? styles["root-with-icon"] : "",
+        iconSingleSlot !== None ? styles["root-with-icon-single"] : "",
+        iconDouble1Slot !== None ? styles["root-with-icon-double"] : "",
+        className
       ])}
+      style={style}
     >
       <div 
         ref={ReactDOM.Ref.domRef(main)}
         tabIndex={disabled ? 0 : 0}
         onClick={onClick}
         className={cx([
-          style["root-button"],
-          disabled ? style["disabled"] : "",
-          typeColor === "Secondary" ? style["secondary"] : "",
-          typeColor === "Tertiary" ? style["tertiary"] : "",
-          forceActive ? style["force-active"] : ""
+          styles["root-button"],
+          disabled ? styles["disabled"] : "",
+          typeColor === Secondary ? styles["secondary"] : "",
+          typeColor === Tertiary ? styles["tertiary"] : "",
+          forceActive ? styles["force-active"] : ""
         ])}
       >
         <div 
-          className={style["content"]}
+          className={styles["content"]}
         >
           {slotEl}
         </div>      

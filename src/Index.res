@@ -4,7 +4,32 @@ let default = () => {
   <div>
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
-      iconSingleSlot={React.string(`count is ${count->Belt.Int.toString}`)}
+      value={`count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+    />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
+      typeColor={Secondary}
+      value={`count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
+      typeColor={Tertiary}
+      value={`count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
+      typeSize={L}
+      value={`count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
+      typeSize={S}
+      value={`count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
     />
   </div>
 }

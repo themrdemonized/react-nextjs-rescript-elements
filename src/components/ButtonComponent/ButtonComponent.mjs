@@ -6,9 +6,11 @@ import * as Belt_Option from "rescript/lib/es6/belt_Option.js";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import ButtonComponentModuleScss from "./ButtonComponent.module.scss";
 
-var style = ButtonComponentModuleScss;
+var styles = ButtonComponentModuleScss;
 
 function ButtonComponent(props) {
+  var className = props.className;
+  var style = props.style;
   var iconDouble2Slot = props.iconDouble2Slot;
   var iconDouble1Slot = props.iconDouble1Slot;
   var iconSingleSlot = props.iconSingleSlot;
@@ -22,10 +24,12 @@ function ButtonComponent(props) {
   var type_ = props.type_;
   var value$1 = value !== undefined ? value : "";
   var name$1 = name !== undefined ? name : "";
-  var typeSize$1 = typeSize !== undefined ? typeSize : /* 'M' */77;
-  var typeColor$1 = typeColor !== undefined ? typeColor : "Primary";
+  var typeSize$1 = typeSize !== undefined ? typeSize : /* M */2;
+  var typeColor$1 = typeColor !== undefined ? typeColor : /* Primary */0;
   var disabled$1 = disabled !== undefined ? disabled : false;
   var forceActive$1 = forceActive !== undefined ? forceActive : false;
+  var style$1 = style !== undefined ? style : ({});
+  var className$1 = className !== undefined ? className : "";
   var main = React.useRef(null);
   var input = React.useRef(null);
   React.useEffect((function () {
@@ -38,7 +42,7 @@ function ButtonComponent(props) {
         }), [disabled$1]);
   var inputEl = type_ !== undefined ? React.createElement("input", {
           ref: Caml_option.some(input),
-          className: style["hidden-input"],
+          className: styles["hidden-input"],
           name: name$1,
           type: type_,
           value: value$1
@@ -46,47 +50,49 @@ function ButtonComponent(props) {
   var slotEl;
   if (iconSingleSlot !== undefined) {
     slotEl = React.createElement("div", {
-          className: style["icon-single"]
+          className: styles["icon-single"]
         }, Caml_option.valFromOption(iconSingleSlot));
   } else if (iconDouble1Slot !== undefined) {
     var t = Caml_option.valFromOption(iconDouble1Slot);
     slotEl = iconDouble2Slot !== undefined ? React.createElement(React.Fragment, undefined, React.createElement("div", {
-                className: style["icon-double"]
+                className: styles["icon-double"]
               }, t), React.createElement("div", {
-                className: style["icon-double"]
+                className: styles["icon-double"]
               }, Caml_option.valFromOption(iconDouble2Slot))) : React.createElement("div", {
-            className: style["icon-double"]
+            className: styles["icon-double"]
           }, t);
   } else {
     slotEl = iconWithTextSlot !== undefined ? React.createElement("div", {
-            className: style["icon-with-text"]
+            className: styles["icon-with-text"]
           }, Caml_option.valFromOption(iconWithTextSlot)) : React.createElement("div", {
-            className: style.text
+            className: styles.text
           }, value$1);
   }
   return React.createElement(React.Fragment, undefined, React.createElement("div", {
                   className: Cx.cx([
                         "foura__trade_elements__elements_palette",
-                        style.root,
-                        typeSize$1 === /* 'L' */76 ? style.large : "",
-                        typeSize$1 === /* 'S' */83 ? style.small : "",
-                        iconWithTextSlot !== undefined ? style["root-with-icon"] : "",
-                        iconSingleSlot !== undefined ? style["root-with-icon-single"] : "",
-                        iconDouble1Slot !== undefined ? style["root-with-icon-double"] : ""
-                      ])
+                        styles.root,
+                        typeSize$1 === /* L */0 ? styles.large : "",
+                        typeSize$1 === /* S */1 ? styles.small : "",
+                        iconWithTextSlot !== undefined ? styles["root-with-icon"] : "",
+                        iconSingleSlot !== undefined ? styles["root-with-icon-single"] : "",
+                        iconDouble1Slot !== undefined ? styles["root-with-icon-double"] : "",
+                        className$1
+                      ]),
+                  style: style$1
                 }, React.createElement("div", {
                       ref: Caml_option.some(main),
                       className: Cx.cx([
-                            style["root-button"],
-                            disabled$1 ? style.disabled : "",
-                            typeColor$1 === "Secondary" ? style.secondary : "",
-                            typeColor$1 === "Tertiary" ? style.tertiary : "",
-                            forceActive$1 ? style["force-active"] : ""
+                            styles["root-button"],
+                            disabled$1 ? styles.disabled : "",
+                            typeColor$1 === /* Secondary */1 ? styles.secondary : "",
+                            typeColor$1 === /* Tertiary */2 ? styles.tertiary : "",
+                            forceActive$1 ? styles["force-active"] : ""
                           ]),
                       tabIndex: 0,
                       onClick: props.onClick
                     }, React.createElement("div", {
-                          className: style.content
+                          className: styles.content
                         }, slotEl)), inputEl));
 }
 
@@ -95,4 +101,4 @@ var make = ButtonComponent;
 export {
   make ,
 }
-/* style Not a pure module */
+/* styles Not a pure module */
