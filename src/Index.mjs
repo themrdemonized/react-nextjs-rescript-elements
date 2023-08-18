@@ -65,6 +65,17 @@ function $$default(param) {
                   style: {
                     marginBottom: "16px"
                   }
+                }), React.createElement(ButtonComponent.make, {
+                  value: "count is " + String(count) + "",
+                  disabled: true,
+                  onClick: (function (param) {
+                      Curry._1(setCount, (function (count) {
+                              return count + 1 | 0;
+                            }));
+                    }),
+                  style: {
+                    marginBottom: "16px"
+                  }
                 }));
 }
 

@@ -31,5 +31,11 @@ let default = () => {
       value={`count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
     />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
+      disabled=true
+      value={`count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
   </div>
 }
