@@ -2,7 +2,7 @@
   "name": "rescript-nextjs-template",
   "namespace": false,
   "jsx": { "version": 4, "mode": "classic" },
-  "bs-dependencies": ["@rescript/react"],
+  "bs-dependencies": ["@rescript/react", "rescript-classnames"],
   "ppx-flags": [],
   "sources": [
     { "dir": "src", "subdirs": true }
@@ -19,5 +19,6 @@
   "gentypeconfig": {
     "language": "untyped",
     "shims": []
-  }
+  },
+  "bsc-flags": ["-open Cx"]
 }

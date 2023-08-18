@@ -4,15 +4,8 @@ module Navigation = {
   @react.component
   let make = () =>
     <nav >
-      <Link href="/">
-        <img  src="/static/zeit-black-triangle.svg" />
-        <span >
-          {React.string("Next")} <span > {React.string(" + ReScript")} </span>
-        </span>
-      </Link>
       <div >
         <Link href="/"> {React.string("Home")} </Link>
-        <Link href="/examples"> {React.string("Examples")} </Link>
         <a
           
           target="_blank"

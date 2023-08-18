@@ -4,17 +4,9 @@ import * as React from "react";
 import Link from "next/link";
 
 function MainLayout$Navigation(props) {
-  return React.createElement("nav", undefined, React.createElement(Link, {
-                  href: "/",
-                  children: null
-                }, React.createElement("img", {
-                      src: "/static/zeit-black-triangle.svg"
-                    }), React.createElement("span", undefined, "Next", React.createElement("span", undefined, " + ReScript"))), React.createElement("div", undefined, React.createElement(Link, {
+  return React.createElement("nav", undefined, React.createElement("div", undefined, React.createElement(Link, {
                       href: "/",
                       children: "Home"
-                    }), React.createElement(Link, {
-                      href: "/examples",
-                      children: "Examples"
                     }), React.createElement("a", {
                       href: "https://github.com/ryyppy/nextjs-default",
                       target: "_blank"

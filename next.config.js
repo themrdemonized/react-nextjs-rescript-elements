@@ -28,7 +28,7 @@ const config = {
       // correctly detected within our src/ folder
       config.module.rules.push({
         test: /\.m?js$/,
-        use: options.defaultLoaders.babel,
+        // use: options.defaultLoaders.babel,
         exclude: /node_modules/,
         type: "javascript/auto",
         resolve: {

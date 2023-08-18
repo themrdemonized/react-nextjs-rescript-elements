@@ -1,14 +1,15 @@
 {
-  "name": "rescript-nextjs-template",
+  "name": "rescript-trade-elements",
   "version": "1.0.0",
-  "author": "Patrick Ecker <ryyppy@users.noreply.github.com>",
-  "license": "Apache-2.0",
+  "author": "demonized-4A",
+  "private": true,
   "dependencies": {
     "next": "13.4.16",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "rescript-classnames": "^6.0.0",
+    "sass": "^1.65.1"
   },
-  "repository": "https://github.com/ryyppy/rescript-nextjs-template",
   "scripts": {
     "dev": "next",
     "debug": "NODE_OPTIONS='--inspect' next",
@@ -21,6 +22,8 @@
     "res:start": "rescript build -w"
   },
   "devDependencies": {
+    "@4ait/trade_elements": "git+https://github.com/4ait/npm_trade_elements.git#semver:^1.20.3",
+    "@4ait/trade_fonts": "git+https://github.com/4ait/npm_trade_fonts.git#semver:^1",
     "@rescript/react": "0.11.0",
     "autoprefixer": "10.4.15",
     "cssnano": "6.0.1",
