@@ -4,38 +4,44 @@ let default = () => {
   <div>
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
-      value={`count is ${count->Belt.Int.toString}`}
+      value={`default count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
     />
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
       typeColor={Secondary}
-      value={`count is ${count->Belt.Int.toString}`}
+      value={`Secondary count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
     />
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
       typeColor={Tertiary}
-      value={`count is ${count->Belt.Int.toString}`}
+      value={`Tertiary count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
     />
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
       typeSize={L}
-      value={`count is ${count->Belt.Int.toString}`}
+      value={`Large count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
     />
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
       typeSize={S}
-      value={`count is ${count->Belt.Int.toString}`}
+      value={`Small count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
     />
     <ButtonComponent
       onClick={_ => setCount(count => count + 1)}
       disabled=true
-      value={`count is ${count->Belt.Int.toString}`}
+      value={`Disabled count is ${count->Belt.Int.toString}`}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
+    <ButtonComponent
+      onClick={_ => setCount(count => count + 1)}
+      value={`Hidden div count is ${count->Belt.Int.toString}`}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      type_="text"
     />
   </div>
 }

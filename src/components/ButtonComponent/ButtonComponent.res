@@ -1,5 +1,6 @@
 %%private(@module("./ButtonComponent.module.scss") external styles: {..} = "default")
 @send external blur: Dom.element => unit = "blur"
+@send external click: Dom.element => unit = "click"
 
 type typeSizes = L | S | M
 type typeColors = Primary | Secondary | Tertiary
@@ -34,6 +35,7 @@ let make = (
   let inputEl: React.element = switch type_ {
     | Some(t) =>
       <input
+        readOnly=true
         ref={ReactDOM.Ref.domRef(input)}
         type_={t}
         name={name}
@@ -74,6 +76,17 @@ let make = (
         {React.string(value)}
       </div>
   }
+
+  let handleClick = (e) => {
+    if !disabled {
+      switch type_ {
+        | Some(_) => input.current->Js.Nullable.toOption->Belt.Option.forEach(el => el->click)
+        | None => ()
+      }
+      // Js.Console.log("clicked")
+      onClick(e);
+    }
+  }
   <>
     <div
       className={cx([
@@ -91,7 +104,7 @@ let make = (
       <div 
         ref={ReactDOM.Ref.domRef(main)}
         tabIndex={disabled ? 0 : 0}
-        onClick={onClick}
+        onClick={handleClick}
         className={cx([
           styles["root-button"],
           disabled ? styles["disabled"] : "",
