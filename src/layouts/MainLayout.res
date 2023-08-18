@@ -1,11 +1,14 @@
+%%private(@module("./MainLayout.module.scss") external styles: {..} = "default")
+
 module Link = Next.Link
 
 module Navigation = {
   @react.component
   let make = () =>
     <nav >
-      <div >
+      <div className={styles["nav-bar"]}>
         <Link href="/"> {React.string("Home")} </Link>
+        <Link href="/buttons"> {React.string("Buttons")} </Link>
         <a
           
           target="_blank"

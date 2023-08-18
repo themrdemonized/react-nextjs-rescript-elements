@@ -8,15 +8,22 @@ function $$default(props) {
   var router = Router.useRouter();
   var content = React.createElement(props.Component, props.pageProps);
   var match = router.route;
-  if (match === "/examples") {
-    return React.createElement(MainLayout.make, {
-                children: null
-              }, React.createElement("h1", undefined, "Examples Section"), React.createElement("div", undefined, content));
-  } else {
-    return React.createElement(MainLayout.make, {
-                children: content
-              });
+  switch (match) {
+    case "/" :
+    case "/buttons" :
+        break;
+    case "/examples" :
+        return React.createElement(MainLayout.make, {
+                    children: null
+                  }, React.createElement("h1", undefined, "Examples Section"), React.createElement("div", undefined, content));
+    default:
+      return React.createElement(MainLayout.make, {
+                  children: content
+                });
   }
+  return React.createElement(MainLayout.make, {
+              children: null
+            }, React.createElement("h1", undefined, "Buttons"), React.createElement("div", undefined, content));
 }
 
 export {

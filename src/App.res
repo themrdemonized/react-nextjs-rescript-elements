@@ -26,10 +26,21 @@ let default = (props: props): React.element => {
   let content = React.createElement(component, pageProps)
 
   switch router.route {
+  | "/"
+  | "/buttons" =>
+    <MainLayout>
+      <h1 > {React.string("Buttons")} </h1> 
+      <div>
+        content
+      </div>
+    </MainLayout>
   | "/examples" =>
     <MainLayout>
       <h1 > {React.string("Examples Section")} </h1> <div> content </div>
     </MainLayout>
-  | _ => <MainLayout> content </MainLayout>
+  | _ => 
+    <MainLayout>
+      content
+    </MainLayout>
   }
 }
