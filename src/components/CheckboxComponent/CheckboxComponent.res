@@ -13,7 +13,7 @@ let make = (
   ~isError: bool=false,
   ~type_: types=M,
   ~mode: modes=Normal,
-  ~updateModelValue: (bool) => unit,
+  ~updateModelValue: (states) => unit,
   ~children: option<React.element>=?,
   
   ~style: ReactDOM.Style.t=ReactDOM.Style.make(()),
@@ -24,16 +24,10 @@ let make = (
         setIsFocused(_ => true)
     }
 
-    let currentChecked: ref<bool> = ref(modelValue === True ? true : false)
-
-    let state: states = switch mode {
-        | Normal => currentChecked.contents ? True : False
-        | Parted => switch (currentChecked.contents, modelValue) {
-            | (true, _) => True
-            | (false, Parted) => Parted
-            | (_, _) => False
-        }
-    }
+    let (state, setState) = React.useState(() => switch mode {
+        | Normal => modelValue === True ? True : False
+        | Parted => modelValue
+    })
     
     let onBlur = (_) => {
         setIsFocused(_ => false)
@@ -41,8 +35,8 @@ let make = (
 
     let onChange = (_) => {
         if !disabled {
-            currentChecked := !currentChecked.contents
-            updateModelValue(currentChecked.contents)
+            setState(s => s === True ? False : True)
+            updateModelValue(state)
         }
     }
 
@@ -63,15 +57,9 @@ let make = (
         ()
     }
 
-    React.useEffect1(() => {
-        currentChecked := switch (mode, modelValue) {
-            | (Normal, True) => true
-            | (Normal, _) => false
-            | (Parted, True) => true
-            | (Parted, _) => false
-        }
-        None
-    }, [mode])
+    let onDoubleClick = (e) => {
+        e->ReactEvent.Mouse.preventDefault
+    }
 
     <div>
         <div
@@ -93,6 +81,7 @@ let make = (
 
             onKeyUp={onKeyUp}
             onMouseDown={onMouseDown}
+            onDoubleClick={onDoubleClick}
 
             onClick={onChange}
         >

@@ -10,7 +10,47 @@ function $$default(param) {
   return React.createElement("div", undefined, React.createElement(CheckboxComponent.make, {
                   type_: /* M */0,
                   updateModelValue: c,
-                  children: "Тестовый текст"
+                  children: "Test text",
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  type_: /* S */1,
+                  updateModelValue: c,
+                  children: "Small test text",
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  disabled: true,
+                  updateModelValue: c,
+                  children: "Disabled test text",
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  isError: true,
+                  updateModelValue: c,
+                  children: "Errored test text",
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  modelValue: /* True */0,
+                  disabled: true,
+                  updateModelValue: c,
+                  children: "Disabled checked test text",
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  modelValue: /* Parted */2,
+                  mode: /* Parted */1,
+                  updateModelValue: c,
+                  children: "Parted value test text",
+                  style: {
+                    marginBottom: "16px"
+                  }
                 }));
 }
 

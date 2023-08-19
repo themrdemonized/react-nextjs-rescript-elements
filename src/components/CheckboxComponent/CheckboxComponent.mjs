@@ -36,18 +36,17 @@ function CheckboxComponent(props) {
             return true;
           }));
   };
-  var currentChecked = {
-    contents: modelValue$1 === /* True */0
-  };
-  var state;
-  if (mode$1) {
-    var match$1 = currentChecked.contents;
-    state = match$1 ? /* True */0 : (
-        modelValue$1 >= 2 ? /* Parted */2 : /* False */1
-      );
-  } else {
-    state = currentChecked.contents ? /* True */0 : /* False */1;
-  }
+  var match$1 = React.useState(function () {
+        if (mode$1) {
+          return modelValue$1;
+        } else if (modelValue$1 === /* True */0) {
+          return /* True */0;
+        } else {
+          return /* False */1;
+        }
+      });
+  var setState = match$1[1];
+  var state = match$1[0];
   var onBlur = function (param) {
     Curry._1(setIsFocused, (function (param) {
             return false;
@@ -55,8 +54,14 @@ function CheckboxComponent(props) {
   };
   var onChange = function (param) {
     if (!disabled$1) {
-      currentChecked.contents = !currentChecked.contents;
-      return Curry._1(updateModelValue, currentChecked.contents);
+      Curry._1(setState, (function (s) {
+              if (s === /* True */0) {
+                return /* False */1;
+              } else {
+                return /* True */0;
+              }
+            }));
+      return Curry._1(updateModelValue, state);
     }
     
   };
@@ -76,9 +81,9 @@ function CheckboxComponent(props) {
   var onMouseDown = function (param) {
     
   };
-  React.useEffect((function () {
-          currentChecked.contents = modelValue$1 === 0;
-        }), [mode$1]);
+  var onDoubleClick = function (e) {
+    e.preventDefault();
+  };
   return React.createElement("div", undefined, React.createElement("div", {
                   className: Cx.cx([
                         "foura__trade_elements__elements_palette",
@@ -96,6 +101,7 @@ function CheckboxComponent(props) {
                   onFocus: onFocus,
                   onBlur: onBlur,
                   onClick: onChange,
+                  onDoubleClick: onDoubleClick,
                   onMouseDown: onMouseDown
                 }, React.createElement("div", {
                       className: styles["checkbox-wrapper"]
