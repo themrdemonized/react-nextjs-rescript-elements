@@ -12,6 +12,10 @@ function $$default(props) {
     case "/" :
     case "/buttons" :
         break;
+    case "/checkboxes" :
+        return React.createElement(MainLayout.make, {
+                    children: null
+                  }, React.createElement("h1", undefined, "Checkboxes"), React.createElement("div", undefined, content));
     case "/examples" :
         return React.createElement(MainLayout.make, {
                     children: null

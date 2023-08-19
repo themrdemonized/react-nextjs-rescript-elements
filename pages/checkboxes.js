@@ -1,4 +1,4 @@
-import IndexRes from "src/Index.mjs";
+import CheckboxesRes from "src/Checkboxes.mjs";
 
 // Note:
 // We need to wrap the make call with
@@ -7,6 +7,6 @@ import IndexRes from "src/Index.mjs";
 //
 // If you don't do this, your Fast-Refresh will
 // not work!
-export default function Buttons(props) {
-  return <IndexRes {...props}/>;
+export default function Index(props) {
+  return <CheckboxesRes {...props}/>;
 }

@@ -34,6 +34,13 @@ let default = (props: props): React.element => {
         content
       </div>
     </MainLayout>
+  | "/checkboxes" =>
+    <MainLayout>
+      <h1 > {React.string("Checkboxes")} </h1> 
+      <div>
+        content
+      </div>
+    </MainLayout>
   | "/examples" =>
     <MainLayout>
       <h1 > {React.string("Examples Section")} </h1> <div> content </div>

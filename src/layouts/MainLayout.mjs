@@ -18,6 +18,9 @@ function MainLayout$Navigation(props) {
                     }), React.createElement(Link, {
                       href: "/buttons",
                       children: "Buttons"
+                    }), React.createElement(Link, {
+                      href: "/checkboxes",
+                      children: "Checkboxes"
                     }), React.createElement("a", {
                       href: "https://github.com/ryyppy/nextjs-default",
                       target: "_blank"

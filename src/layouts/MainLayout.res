@@ -11,6 +11,7 @@ module Navigation = {
       <div className={styles["nav-bar"]}>
         <Link href="/"> {React.string("Home")} </Link>
         <Link href="/buttons"> {React.string("Buttons")} </Link>
+        <Link href="/checkboxes"> {React.string("Checkboxes")} </Link>
         <a
           
           target="_blank"
