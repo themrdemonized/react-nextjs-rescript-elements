@@ -57,8 +57,12 @@ let make = (
         }        
     }
 
-    let onMouseDown = (_) => {
-        ()
+    let onMouseDown = (e) => {
+        let d = e->Next.MouseExtended.detail
+        if d > 1 {
+            // Js.Console.log(d)
+            e->ReactEvent.Mouse.preventDefault
+        }
     }
 
     let onDoubleClick = (e) => {

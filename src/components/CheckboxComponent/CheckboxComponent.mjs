@@ -82,7 +82,12 @@ function CheckboxComponent(props) {
       return ;
     }
   };
-  var onMouseDown = function (param) {
+  var onMouseDown = function (e) {
+    var d = e.detail;
+    if (d > 1) {
+      e.preventDefault();
+      return ;
+    }
     
   };
   var onDoubleClick = function (e) {

@@ -142,3 +142,8 @@ module Dynamic = {
 
   @val external import_: string => Js.Promise.t<'a> = "import"
 }
+
+module MouseExtended = {
+  include ReactEvent.Mouse
+  @get external detail: ReactEvent.Mouse.t => int = "detail"
+}

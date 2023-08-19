@@ -28,6 +28,8 @@ var $$Error = {};
 
 var Dynamic = {};
 
+var MouseExtended = {};
+
 export {
   GetServerSideProps ,
   GetStaticProps ,
@@ -37,5 +39,6 @@ export {
   Head ,
   $$Error ,
   Dynamic ,
+  MouseExtended ,
 }
 /* No side effect */
