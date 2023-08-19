@@ -22,6 +22,9 @@ function MainLayout$Navigation(props) {
                       href: "/checkboxes",
                       children: "Checkboxes"
                     }), React.createElement(Link, {
+                      href: "/icons",
+                      children: "Icons"
+                    }), React.createElement(Link, {
                       href: "/popovers",
                       children: "Popovers"
                     }), React.createElement("a", {
