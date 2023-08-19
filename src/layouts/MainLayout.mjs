@@ -8,7 +8,9 @@ import MainLayoutModuleScss from "./MainLayout.module.scss";
 var styles = MainLayoutModuleScss;
 
 function MainLayout$Navigation(props) {
-  return React.createElement("nav", undefined, React.createElement("div", {
+  return React.createElement("nav", {
+              className: styles["v-header"]
+            }, React.createElement("div", {
                   className: styles["nav-bar"]
                 }, React.createElement(Link, {
                       href: "/",
@@ -23,13 +25,10 @@ function MainLayout$Navigation(props) {
 }
 
 function MainLayout(props) {
-  var minWidth = {
-    minWidth: "20rem"
-  };
   return React.createElement(React.Fragment, undefined, React.createElement(Head, {
                   children: React.createElement("title", undefined, "Rescript - React - NextJS - Trade elements")
                 }), React.createElement("div", {
-                  style: minWidth
+                  className: "kr-body"
                 }, React.createElement("div", undefined, React.createElement(MainLayout$Navigation, {}), React.createElement("main", undefined, props.children))));
 }
 

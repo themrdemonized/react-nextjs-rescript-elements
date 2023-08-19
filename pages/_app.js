@@ -1,7 +1,7 @@
 import "@4ait/trade_style_palette/schemes/default.scss"
 import "@4ait/trade_fonts/declare.scss"
 import "@4ait/trade_elements/src/styles/templates/button.scss"
-import 'styles/main.css'
+import 'styles/main.scss'
 
 // Note:
 // Just renaming $$default to ResApp alone

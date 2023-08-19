@@ -1,3 +1,25 @@
+$minMarginMenuItem: 8;
+$maxMarginMenuItem: 20;
+
+$maxWidthHeader: 1320;
+$mediumWidthHeader: 980;
+
+$maxWidthMenu: 777;
+$mediumWidthMenu: 437;
+
+$headerHeight: 64px;
+$headerMainHeight: 108px;
+
+.v-header {
+    position: relative;
+    height: $headerHeight;
+    background: white;
+    transition: height .56s cubic-bezier(0.52, 0.16, 0.24, 1), box-shadow .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
 .nav-bar {
     > * {
         display: inline-block;

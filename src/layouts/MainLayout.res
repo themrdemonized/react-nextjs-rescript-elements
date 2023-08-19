@@ -7,7 +7,7 @@ module Head = Next.Head
 module Navigation = {
   @react.component
   let make = () =>
-    <nav >
+    <nav className={styles["v-header"]}>
       <div className={styles["nav-bar"]}>
         <Link href="/"> {React.string("Home")} </Link>
         <Link href="/buttons"> {React.string("Buttons")} </Link>
@@ -23,12 +23,11 @@ module Navigation = {
 
 @react.component
 let make = (~children) => {
-  let minWidth = ReactDOM.Style.make(~minWidth="20rem", ())
   <>
     <Head>
       <title>{React.string("Rescript - React - NextJS - Trade elements")}</title>
     </Head>
-    <div style=minWidth >
+    <div className={"kr-body"} >
       <div >
         <Navigation /> <main > children </main>
       </div>
