@@ -31,7 +31,10 @@ let make = (~children) => {
     </Head>
     <div className={"kr-body"} >
       <div >
-        <Navigation /> <main > children </main>
+        <Navigation /> 
+        <main>
+          children
+        </main>
       </div>
     </div>
   </>

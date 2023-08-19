@@ -20,6 +20,10 @@ function $$default(props) {
         return React.createElement(MainLayout.make, {
                     children: null
                   }, React.createElement("h1", undefined, "Examples Section"), React.createElement("div", undefined, content));
+    case "/popovers" :
+        return React.createElement(MainLayout.make, {
+                    children: null
+                  }, React.createElement("h1", undefined, "Popovers"), React.createElement("div", undefined, content));
     default:
       return React.createElement(MainLayout.make, {
                   children: content
