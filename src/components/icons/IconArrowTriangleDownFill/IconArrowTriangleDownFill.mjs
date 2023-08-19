@@ -5,10 +5,8 @@ import * as IconComponent from "../../IconComponent/IconComponent.mjs";
 import IconArrowTriangleDownFillModuleScss from "./IconArrowTriangleDownFill.module.scss";
 
 function IconArrowTriangleDownFill(props) {
-  var className = props.className;
-  var style = props.style;
-  var style$1 = style !== undefined ? style : ({});
-  var className$1 = className !== undefined ? className : "";
+  var props$1 = props.props;
+  var props$2 = props$1 !== undefined ? props$1 : ({});
   return React.createElement(IconComponent.make, {
               children: React.createElement("svg", {
                     fill: "none",
@@ -18,8 +16,7 @@ function IconArrowTriangleDownFill(props) {
                         d: "M13 6.5L8 11.5L3 6.5L13 6.5Z",
                         fill: "currentColor"
                       })),
-              style: style$1,
-              className: className$1
+              props: props$2
             });
 }
 

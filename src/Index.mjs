@@ -20,9 +20,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginTop: "16px",
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "Secondary count is " + String(count) + "",
@@ -32,8 +34,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "Tertiary count is " + String(count) + "",
@@ -43,8 +48,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "Large count is " + String(count) + "",
@@ -54,8 +62,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "Small count is " + String(count) + "",
@@ -65,8 +76,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "Disabled count is " + String(count) + "",
@@ -76,8 +90,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "forceActive is " + String(count) + "",
@@ -87,8 +104,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   type_: "text",
@@ -98,8 +118,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "icon count is " + String(count) + "",
@@ -109,8 +132,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "icon count is " + String(count) + "",
@@ -120,8 +146,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }), React.createElement(ButtonComponent.make, {
                   value: "icon count is " + String(count) + "",
@@ -132,8 +161,11 @@ function $$default(param) {
                               return count + 1 | 0;
                             }));
                     }),
-                  style: {
-                    marginBottom: "16px"
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
                   }
                 }));
 }

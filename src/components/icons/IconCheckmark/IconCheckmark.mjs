@@ -5,10 +5,8 @@ import * as IconComponent from "../../IconComponent/IconComponent.mjs";
 import IconCheckmarkModuleScss from "./IconCheckmark.module.scss";
 
 function IconCheckmark(props) {
-  var className = props.className;
-  var style = props.style;
-  var style$1 = style !== undefined ? style : ({});
-  var className$1 = className !== undefined ? className : "";
+  var props$1 = props.props;
+  var props$2 = props$1 !== undefined ? props$1 : ({});
   return React.createElement(IconComponent.make, {
               children: React.createElement("svg", {
                     fill: "none",
@@ -20,8 +18,7 @@ function IconCheckmark(props) {
                         fill: "currentColor",
                         fillRule: "evenodd"
                       })),
-              style: style$1,
-              className: className$1
+              props: props$2
             });
 }
 

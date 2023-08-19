@@ -3,12 +3,10 @@
 
 @react.component
 let make = (
-    ~style: ReactDOM.Style.t=ReactDOM.Style.make(()),
-    ~className = ""
+    ~props: ReactDOM.domProps={}
 ) => {
     <IconComponent
-        style={style}
-        className={className}
+        props
     >
         <svg 
             viewBox="0 0 16 16"

@@ -5,33 +5,43 @@ let default = () => {
     <CheckboxComponent
       type_={M}
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
     />
     <CheckboxComponent
       type_={M}
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())},
+      }
     >
       {React.string("Test text")}
     </CheckboxComponent>
     <CheckboxComponent
       type_={S}
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
     >
       {React.string("Small test text")}
     </CheckboxComponent>
     <CheckboxComponent
       disabled=true
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
     >
       {React.string("Disabled test text")}
     </CheckboxComponent>
     <CheckboxComponent
       isError=true
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
     >
       {React.string("Errored test text")}
     </CheckboxComponent>
@@ -39,7 +49,9 @@ let default = () => {
       disabled=true
       modelValue=True
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
     >
       {React.string("Disabled checked test text")}
     </CheckboxComponent>
@@ -47,7 +59,9 @@ let default = () => {
       modelValue=Parted
       mode={Parted}
       updateModelValue={c}
-      style={ReactDOM.Style.make(~marginBottom="16px", ())}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
     >
       {React.string("Parted value test text")}
     </CheckboxComponent>

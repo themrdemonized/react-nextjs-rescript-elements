@@ -4,10 +4,12 @@
 @react.component
 let make = (
     ~children,
-    ~style: ReactDOM.Style.t=ReactDOM.Style.make(()),
-    ~className = ""
-) => {
+    ~props: ReactDOM.domProps={}
+  ) => {
+    let className = Utils.getClassNameFromProps(props)
+    let filteredProps = Utils.filterProps(props)
     <div 
+        {...filteredProps}
         className={cx([
             styles["icon"],
             className

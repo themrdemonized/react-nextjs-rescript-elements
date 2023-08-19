@@ -19,11 +19,13 @@ let make = (
   ~iconDouble1Slot: option<React.element>=?,
   ~iconDouble2Slot: option<React.element>=?,
   ~onClick,
-  ~style: ReactDOM.Style.t=ReactDOM.Style.make(()),
-  ~className = ""
+  ~props: ReactDOM.domProps={}
   ) => {
   let main = React.useRef(Js.Nullable.null)
   let input = React.useRef(Js.Nullable.null)
+
+  let className = Utils.getClassNameFromProps(props)
+  let filteredProps = Utils.filterProps(props)
 
   React.useEffect1(() => {
     if disabled {
@@ -97,6 +99,7 @@ let make = (
   }
   <>
     <div
+      {...filteredProps}
       className={cx([
         "foura__trade_elements__elements_palette",
         styles["root"],
@@ -107,7 +110,6 @@ let make = (
         iconDouble1Slot !== None ? styles["root-with-icon-double"] : "",
         className
       ])}
-      style={style}
     >
       <div 
         ref={ReactDOM.Ref.domRef(main)}

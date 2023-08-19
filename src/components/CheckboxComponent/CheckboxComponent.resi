@@ -12,6 +12,5 @@ let make: (
   ~mode: modes=?,
   ~updateModelValue: states => unit,
   ~children: React.element=?,
-  ~style: ReactDOM.Style.t=?,
-  ~className: string=?,
+  ~props: ReactDOM.domProps=?,
 ) => React.element

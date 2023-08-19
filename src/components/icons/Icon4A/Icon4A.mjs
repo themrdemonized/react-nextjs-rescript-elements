@@ -5,10 +5,8 @@ import * as IconComponent from "../../IconComponent/IconComponent.mjs";
 import Icon4AModuleScss from "./Icon4A.module.scss";
 
 function Icon4A(props) {
-  var className = props.className;
-  var style = props.style;
-  var style$1 = style !== undefined ? style : ({});
-  var className$1 = className !== undefined ? className : "";
+  var props$1 = props.props;
+  var props$2 = props$1 !== undefined ? props$1 : ({});
   return React.createElement(IconComponent.make, {
               children: React.createElement("svg", {
                     fill: "none",
@@ -21,8 +19,7 @@ function Icon4A(props) {
                         d: "M14.5359 8.3C14.7922 8.3 15 8.50147 15 8.75V11.15C15 12.724 13.684 14 12.0607 14H10.2043C9.94796 14 9.74017 13.7985 9.74017 13.55V11.15C9.74017 9.57599 11.0561 8.3 12.6795 8.3H14.5359Z",
                         fill: "currentColor"
                       })),
-              style: style$1,
-              className: className$1
+              props: props$2
             });
 }
 

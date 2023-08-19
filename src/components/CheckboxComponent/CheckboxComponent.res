@@ -16,9 +16,11 @@ let make = (
   ~updateModelValue: (states) => unit,
   ~children: option<React.element>=?,
   
-  ~style: ReactDOM.Style.t=ReactDOM.Style.make(()),
-  ~className = ""
+  ~props: ReactDOM.domProps={}
   ) => {
+    let className = Utils.getClassNameFromProps(props)
+    let filteredProps = Utils.filterProps(props)
+
     let (isFocused, setIsFocused) = React.useState(() => false)
     let onFocus = (_) => {
         if !disabled {
@@ -63,7 +65,9 @@ let make = (
         e->ReactEvent.Mouse.preventDefault
     }
 
-    <div>
+    <div
+        {...filteredProps}
+    >
         <div
             className={cx([
                 "foura__trade_elements__elements_palette",
@@ -75,7 +79,6 @@ let make = (
                 type_ === S ? styles["small"] : "",
                 className
             ])}
-            style={style}
             tabIndex={disabled ? 0 : 0}
 
             onFocus={onFocus}
@@ -95,11 +98,11 @@ let make = (
                 >
                     {state === Parted ? (
                         <IconMinusLarge
-                            className={styles["check-icon"]}
+                            props={className: {styles["check-icon"]}}
                         />
                     ) : (
                         <IconCheckmark
-                            className={styles["check-icon"]}
+                            props={className: {styles["check-icon"]}}
                         />
                     )}
                 </div>

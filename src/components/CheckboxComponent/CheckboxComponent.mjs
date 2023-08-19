@@ -2,6 +2,7 @@
 
 import * as Cx from "rescript-classnames/src/Cx.mjs";
 import * as Curry from "rescript/lib/es6/curry.js";
+import * as Utils from "../../utils/Utils.mjs";
 import * as React from "react";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as IconCheckmark from "../icons/IconCheckmark/IconCheckmark.mjs";
@@ -11,8 +12,7 @@ import CheckboxComponentModuleScss from "./CheckboxComponent.module.scss";
 var styles = CheckboxComponentModuleScss;
 
 function CheckboxComponent(props) {
-  var className = props.className;
-  var style = props.style;
+  var props$1 = props.props;
   var children = props.children;
   var updateModelValue = props.updateModelValue;
   var mode = props.mode;
@@ -25,8 +25,9 @@ function CheckboxComponent(props) {
   var isError$1 = isError !== undefined ? isError : false;
   var type_$1 = type_ !== undefined ? type_ : /* M */0;
   var mode$1 = mode !== undefined ? mode : /* Normal */0;
-  var style$1 = style !== undefined ? style : ({});
-  var className$1 = className !== undefined ? className : "";
+  var props$2 = props$1 !== undefined ? props$1 : ({});
+  var className = Utils.getClassNameFromProps(props$2);
+  var filteredProps = Utils.filterProps(props$2);
   var match = React.useState(function () {
         return false;
       });
@@ -87,7 +88,7 @@ function CheckboxComponent(props) {
   var onDoubleClick = function (e) {
     e.preventDefault();
   };
-  return React.createElement("div", undefined, React.createElement("div", {
+  return React.createElement("div", filteredProps, React.createElement("div", {
                   className: Cx.cx([
                         "foura__trade_elements__elements_palette",
                         styles["input-wrapper"],
@@ -96,9 +97,8 @@ function CheckboxComponent(props) {
                         isError$1 ? styles.error : "",
                         state === /* True */0 || state === /* Parted */2 ? styles.checked : "",
                         type_$1 === /* S */1 ? styles.small : "",
-                        className$1
+                        className
                       ]),
-                  style: style$1,
                   tabIndex: 0,
                   onKeyUp: onKeyUp,
                   onFocus: onFocus,
@@ -111,9 +111,13 @@ function CheckboxComponent(props) {
                     }, React.createElement("div", {
                           className: styles.checkbox
                         }, state === /* Parted */2 ? React.createElement(IconMinusLarge.make, {
-                                className: styles["check-icon"]
+                                props: {
+                                  className: styles["check-icon"]
+                                }
                               }) : React.createElement(IconCheckmark.make, {
-                                className: styles["check-icon"]
+                                props: {
+                                  className: styles["check-icon"]
+                                }
                               }))), children !== undefined ? React.createElement("span", {
                         className: styles.caption
                       }, Caml_option.valFromOption(children)) : null));

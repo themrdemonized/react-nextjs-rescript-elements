@@ -1,4 +1,5 @@
 @send external blur: Dom.element => unit = "blur"
+@send external click: Dom.element => unit = "click"
 type typeSizes = L | S | M
 type typeColors = Primary | Secondary | Tertiary
 @react.component
@@ -15,6 +16,5 @@ let make: (
   ~iconDouble1Slot: React.element=?,
   ~iconDouble2Slot: React.element=?,
   ~onClick: JsxEvent.Mouse.t => unit,
-  ~style: ReactDOM.Style.t=?,
-  ~className: string=?,
+  ~props: ReactDOM.domProps=?,
 ) => React.element

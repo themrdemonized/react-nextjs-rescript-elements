@@ -2,7 +2,9 @@
 
 import * as Cx from "rescript-classnames/src/Cx.mjs";
 import * as Curry from "rescript/lib/es6/curry.js";
+import * as Utils from "../../utils/Utils.mjs";
 import * as React from "react";
+import * as Caml_obj from "rescript/lib/es6/caml_obj.js";
 import * as Belt_Option from "rescript/lib/es6/belt_Option.js";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import ButtonComponentModuleScss from "./ButtonComponent.module.scss";
@@ -10,8 +12,7 @@ import ButtonComponentModuleScss from "./ButtonComponent.module.scss";
 var styles = ButtonComponentModuleScss;
 
 function ButtonComponent(props) {
-  var className = props.className;
-  var style = props.style;
+  var props$1 = props.props;
   var onClick = props.onClick;
   var iconDouble2Slot = props.iconDouble2Slot;
   var iconDouble1Slot = props.iconDouble1Slot;
@@ -30,10 +31,11 @@ function ButtonComponent(props) {
   var typeColor$1 = typeColor !== undefined ? typeColor : /* Primary */0;
   var disabled$1 = disabled !== undefined ? disabled : false;
   var forceActive$1 = forceActive !== undefined ? forceActive : false;
-  var style$1 = style !== undefined ? style : ({});
-  var className$1 = className !== undefined ? className : "";
+  var props$2 = props$1 !== undefined ? props$1 : ({});
   var main = React.useRef(null);
   var input = React.useRef(null);
+  var className = Utils.getClassNameFromProps(props$2);
+  var filteredProps = Utils.filterProps(props$2);
   React.useEffect((function () {
           if (disabled$1) {
             Belt_Option.forEach(Caml_option.nullable_to_opt(main.current), (function (el) {
@@ -84,8 +86,8 @@ function ButtonComponent(props) {
     }
     
   };
-  return React.createElement(React.Fragment, undefined, React.createElement("div", {
-                  className: Cx.cx([
+  var newrecord = Caml_obj.obj_dup(filteredProps);
+  return React.createElement(React.Fragment, undefined, React.createElement("div", (newrecord.className = Cx.cx([
                         "foura__trade_elements__elements_palette",
                         styles.root,
                         typeSize$1 === /* L */0 ? styles.large : "",
@@ -93,10 +95,8 @@ function ButtonComponent(props) {
                         iconWithTextSlot !== undefined ? styles["root-with-icon"] : "",
                         iconSingleSlot !== undefined ? styles["root-with-icon-single"] : "",
                         iconDouble1Slot !== undefined ? styles["root-with-icon-double"] : "",
-                        className$1
-                      ]),
-                  style: style$1
-                }, React.createElement("div", {
+                        className
+                      ]), newrecord), React.createElement("div", {
                       ref: Caml_option.some(main),
                       className: Cx.cx([
                             styles["root-button"],
