@@ -40,12 +40,15 @@ const config = {
       // config.module.rules.push({
       //   test: /\.s[ac]ss$/i,
       //   use: [
-      //     // Creates `style` nodes from JS strings
-      //     "style-loader",
-      //     // Translates CSS into CommonJS
-      //     "css-loader",
-      //     // Compiles Sass to CSS
-      //     "sass-loader",
+      //     'style-loader', // creates style nodes from JS strings
+      //     {
+      //       loader: 'css-loader', // translates CSS into CommonJS
+      //       options: {
+      //         importLoaders: 1
+      //       }
+      //     },
+      //     'postcss-loader', // post process the compiled CSS
+      //     'sass-loader' // compiles Sass to CSS, using Node Sass by default
       //   ],
       // })
     }
