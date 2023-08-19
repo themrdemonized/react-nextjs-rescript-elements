@@ -17,6 +17,54 @@ function $$default(param) {
                     }
                   }
                 }), React.createElement(CheckboxComponent.make, {
+                  type_: /* S */1,
+                  updateModelValue: c,
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  disabled: true,
+                  updateModelValue: c,
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  isError: true,
+                  updateModelValue: c,
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  modelValue: /* True */0,
+                  disabled: true,
+                  isError: true,
+                  updateModelValue: c,
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  modelValue: /* Parted */2,
+                  mode: /* Parted */1,
+                  updateModelValue: c,
+                  props: {
+                    style: {
+                      marginTop: "16px",
+                      marginBottom: "16px"
+                    }
+                  }
+                }), React.createElement(CheckboxComponent.make, {
                   type_: /* M */0,
                   updateModelValue: c,
                   children: "Test text",

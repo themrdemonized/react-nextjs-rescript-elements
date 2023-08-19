@@ -87,29 +87,29 @@ function ButtonComponent(props) {
     
   };
   var newrecord = Caml_obj.obj_dup(filteredProps);
-  return React.createElement(React.Fragment, undefined, React.createElement("div", (newrecord.className = Cx.cx([
-                        "foura__trade_elements__elements_palette",
-                        styles.root,
-                        typeSize$1 === /* L */0 ? styles.large : "",
-                        typeSize$1 === /* S */1 ? styles.small : "",
-                        iconWithTextSlot !== undefined ? styles["root-with-icon"] : "",
-                        iconSingleSlot !== undefined ? styles["root-with-icon-single"] : "",
-                        iconDouble1Slot !== undefined ? styles["root-with-icon-double"] : "",
-                        className
-                      ]), newrecord), React.createElement("div", {
-                      ref: Caml_option.some(main),
-                      className: Cx.cx([
-                            styles["root-button"],
-                            disabled$1 ? styles.disabled : "",
-                            typeColor$1 === /* Secondary */1 ? styles.secondary : "",
-                            typeColor$1 === /* Tertiary */2 ? styles.tertiary : "",
-                            forceActive$1 ? styles["force-active"] : ""
-                          ]),
-                      tabIndex: 0,
-                      onClick: handleClick
-                    }, React.createElement("div", {
-                          className: styles.content
-                        }, slotEl)), inputEl));
+  return React.createElement("div", (newrecord.className = Cx.cx([
+                    "foura__trade_elements__elements_palette",
+                    styles.root,
+                    typeSize$1 === /* L */0 ? styles.large : "",
+                    typeSize$1 === /* S */1 ? styles.small : "",
+                    iconWithTextSlot !== undefined ? styles["root-with-icon"] : "",
+                    iconSingleSlot !== undefined ? styles["root-with-icon-single"] : "",
+                    iconDouble1Slot !== undefined ? styles["root-with-icon-double"] : "",
+                    className
+                  ]), newrecord), React.createElement("div", {
+                  ref: Caml_option.some(main),
+                  className: Cx.cx([
+                        styles["root-button"],
+                        disabled$1 ? styles.disabled : "",
+                        typeColor$1 === /* Secondary */1 ? styles.secondary : "",
+                        typeColor$1 === /* Tertiary */2 ? styles.tertiary : "",
+                        forceActive$1 ? styles["force-active"] : ""
+                      ]),
+                  tabIndex: 0,
+                  onClick: handleClick
+                }, React.createElement("div", {
+                      className: styles.content
+                    }, slotEl)), inputEl);
 }
 
 var make = ButtonComponent;

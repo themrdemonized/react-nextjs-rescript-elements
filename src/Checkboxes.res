@@ -10,6 +10,44 @@ let default = () => {
       }
     />
     <CheckboxComponent
+      type_={S}
+      updateModelValue={c}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
+    />
+    <CheckboxComponent
+      disabled=true
+      updateModelValue={c}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
+    />
+    <CheckboxComponent
+      isError=true
+      updateModelValue={c}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
+    />
+    <CheckboxComponent
+      modelValue={True}
+      disabled=true
+      isError=true
+      updateModelValue={c}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
+    />
+    <CheckboxComponent
+      mode={Parted}
+      modelValue={Parted}
+      updateModelValue={c}
+      props={
+        style: {ReactDOM.Style.make(~marginTop="16px", ~marginBottom="16px", ())}
+      }
+    />
+    <CheckboxComponent
       type_={M}
       updateModelValue={c}
       props={

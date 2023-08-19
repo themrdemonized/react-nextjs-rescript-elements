@@ -97,39 +97,37 @@ let make = (
       onClick(e);
     }
   }
-  <>
-    <div
-      {...filteredProps}
+  <div
+    {...filteredProps}
+    className={cx([
+      "foura__trade_elements__elements_palette",
+      styles["root"],
+      typeSize === L ? styles["large"] : "",
+      typeSize === S ? styles["small"] : "",
+      iconWithTextSlot !== None ? styles["root-with-icon"] : "",
+      iconSingleSlot !== None ? styles["root-with-icon-single"] : "",
+      iconDouble1Slot !== None ? styles["root-with-icon-double"] : "",
+      className
+    ])}
+  >
+    <div 
+      ref={ReactDOM.Ref.domRef(main)}
+      tabIndex={disabled ? 0 : 0}
+      onClick={handleClick}
       className={cx([
-        "foura__trade_elements__elements_palette",
-        styles["root"],
-        typeSize === L ? styles["large"] : "",
-        typeSize === S ? styles["small"] : "",
-        iconWithTextSlot !== None ? styles["root-with-icon"] : "",
-        iconSingleSlot !== None ? styles["root-with-icon-single"] : "",
-        iconDouble1Slot !== None ? styles["root-with-icon-double"] : "",
-        className
+        styles["root-button"],
+        disabled ? styles["disabled"] : "",
+        typeColor === Secondary ? styles["secondary"] : "",
+        typeColor === Tertiary ? styles["tertiary"] : "",
+        forceActive ? styles["force-active"] : ""
       ])}
     >
       <div 
-        ref={ReactDOM.Ref.domRef(main)}
-        tabIndex={disabled ? 0 : 0}
-        onClick={handleClick}
-        className={cx([
-          styles["root-button"],
-          disabled ? styles["disabled"] : "",
-          typeColor === Secondary ? styles["secondary"] : "",
-          typeColor === Tertiary ? styles["tertiary"] : "",
-          forceActive ? styles["force-active"] : ""
-        ])}
+        className={styles["content"]}
       >
-        <div 
-          className={styles["content"]}
-        >
-          {slotEl}
-        </div>      
-      </div>
-      {inputEl}
+        {slotEl}
+      </div>      
     </div>
-  </>
+    {inputEl}
+  </div>
 }
