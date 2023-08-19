@@ -21,6 +21,9 @@ function MainLayout$Navigation(props) {
                     }), React.createElement(Link, {
                       href: "/checkboxes",
                       children: "Checkboxes"
+                    }), React.createElement(Link, {
+                      href: "/popovers",
+                      children: "Popovers"
                     }), React.createElement("a", {
                       href: "https://github.com/ryyppy/nextjs-default",
                       target: "_blank"
