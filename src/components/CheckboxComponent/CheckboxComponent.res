@@ -21,7 +21,9 @@ let make = (
   ) => {
     let (isFocused, setIsFocused) = React.useState(() => false)
     let onFocus = (_) => {
-        setIsFocused(_ => true)
+        if !disabled {
+            setIsFocused(_ => true)
+        }
     }
 
     let (state, setState) = React.useState(() => switch mode {

@@ -32,9 +32,12 @@ function CheckboxComponent(props) {
       });
   var setIsFocused = match[1];
   var onFocus = function (param) {
-    Curry._1(setIsFocused, (function (param) {
-            return true;
-          }));
+    if (!disabled$1) {
+      return Curry._1(setIsFocused, (function (param) {
+                    return true;
+                  }));
+    }
+    
   };
   var match$1 = React.useState(function () {
         if (mode$1) {

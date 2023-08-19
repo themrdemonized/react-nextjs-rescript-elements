@@ -6,6 +6,11 @@ let default = () => {
       type_={M}
       updateModelValue={c}
       style={ReactDOM.Style.make(~marginBottom="16px", ())}
+    />
+    <CheckboxComponent
+      type_={M}
+      updateModelValue={c}
+      style={ReactDOM.Style.make(~marginBottom="16px", ())}
     >
       {React.string("Test text")}
     </CheckboxComponent>

@@ -10,6 +10,12 @@ function $$default(param) {
   return React.createElement("div", undefined, React.createElement(CheckboxComponent.make, {
                   type_: /* M */0,
                   updateModelValue: c,
+                  style: {
+                    marginBottom: "16px"
+                  }
+                }), React.createElement(CheckboxComponent.make, {
+                  type_: /* M */0,
+                  updateModelValue: c,
                   children: "Test text",
                   style: {
                     marginBottom: "16px"
