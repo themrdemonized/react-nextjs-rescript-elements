@@ -1,0 +1,14 @@
+@import 'imports/@4ait/scss_fonts_expansion/fonts_declare';
+
+.foura__trade_elements__elements_palette
+{
+  --4ait-elements--segmented-tabs--hovered-background-color: var(--trade-style-palette_light_fill_quaternary);
+  --4ait-elements--segmented-tabs--disabled-label-color: var(--trade-style-palette_light_label_tertirary);
+  --4ait-elements--segmented-tabs--selected-tab-background-color: var(--trade-style-palette_light_background_primary);
+  --4ait-elements--segmented-tabs--selected-tab-box-shadow: var(--trade-style-palette_shadow_1dp_box-shadow);
+  --4ait-elements--segmented-tabs--body-background-color: var(--trade-style-palette_light_fill_quaternary);
+  --4ait-elements--segmented-tabs--body-divider-color: var(--trade-style-palette_light_divider_opaque);
+
+  @include setFontFromAnotherFont(font-4ait-elements, caption-m, trade-font, m-navigation);
+  @include setFontFromAnotherFont(font-4ait-elements, caption-s, trade-font, m-caption);
+}

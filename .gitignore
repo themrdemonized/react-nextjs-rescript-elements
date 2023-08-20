@@ -4,10 +4,8 @@ out
 *.swp
 *.swo
 
-node_modules/*
+node_modules/
 .next/
-
-!node_modules/@4ait
 
 yarn-error.log
 

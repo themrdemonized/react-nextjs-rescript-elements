@@ -1,0 +1,74 @@
+
+@mixin setupFontsVariables($fontLibFamily,
+                          $fontName,
+                          $fontFamily,
+                          $fontStyle,
+                          $fontWeight,
+                          $fontSize,
+                          $fontLineHeight,
+                          $fontLetterSpacing)
+{
+  --#{$fontLibFamily}-#{$fontName}-font-family: #{$fontFamily};
+  --#{$fontLibFamily}-#{$fontName}-font-style: #{$fontStyle};
+  --#{$fontLibFamily}-#{$fontName}-font-weight: #{$fontWeight};
+  --#{$fontLibFamily}-#{$fontName}-font-size: #{$fontSize};
+  --#{$fontLibFamily}-#{$fontName}-line-height: #{$fontLineHeight};
+  --#{$fontLibFamily}-#{$fontName}-letter-spacing: #{$fontLetterSpacing};
+}
+
+@mixin setFont($fontLibName, $fontName)
+{
+  font-family: var(--#{$fontLibName}-#{$fontName}-font-family);
+  font-style: var(--#{$fontLibName}-#{$fontName}-font-style);
+  font-weight: var(--#{$fontLibName}-#{$fontName}-font-weight);
+  font-size: var(--#{$fontLibName}-#{$fontName}-font-size);
+  line-height: var(--#{$fontLibName}-#{$fontName}-line-height);
+  letter-spacing: var(--#{$fontLibName}-#{$fontName}-letter-spacing);
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+@mixin declareFontClass($fontLibFamily, $fontName)
+{
+  .#{$fontLibFamily}_#{$fontName}
+  {
+    @include setFont($fontLibFamily, $fontName);
+  }
+}
+
+@mixin declareGlobalFont($fontLibFamily,
+                          $fontName,
+                          $fontFamily,
+                          $fontStyle,
+                          $fontWeight,
+                          $fontSize,
+                          $fontLineHeight,
+                          $fontLetterSpacing)
+{
+  :root
+  {
+    @include setupFontsVariables(
+                    $fontLibFamily,
+                    $fontName,
+                    $fontFamily,
+                    $fontStyle,
+                    $fontWeight,
+                    $fontSize,
+                    $fontLineHeight,
+                    $fontLetterSpacing)
+  }
+
+  @include declareFontClass($fontLibFamily, $fontName)
+}
+
+@mixin setFontFromAnotherFont($fontLibName, $fontName, $fromFontLibName, $fromFontName)
+{
+  @include setupFontsVariables(
+                  $fontLibName,
+                  $fontName,
+                  var(--#{$fromFontLibName}-#{$fromFontName}-font-family),
+                  var(--#{$fromFontLibName}-#{$fromFontName}-font-style),
+                  var(--#{$fromFontLibName}-#{$fromFontName}-font-weight),
+                  var(--#{$fromFontLibName}-#{$fromFontName}-font-size),
+                  var(--#{$fromFontLibName}-#{$fromFontName}-line-height),
+                  var(--#{$fromFontLibName}-#{$fromFontName}-letter-spacing))
+}

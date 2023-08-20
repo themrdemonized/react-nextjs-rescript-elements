@@ -1,0 +1,21 @@
+<template>
+  <icon-component>
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.850001 3C0.380563 3 0 3.38055 0 3.85V4.70858C0 4.93401 0.0895534 5.15021 0.248959 5.30962L4 9.06066V13.5607L6 11.5607V9.06066L9.75104 5.30962C9.91045 5.15021 10 4.93401 10 4.70858V3.85C10 3.38056 9.61944 3 9.15 3H0.850001ZM8.43934 4.5L5 7.93934L1.56066 4.5H8.43934Z" fill="currentColor"/>
+<path d="M11.75 4.5C11.3358 4.5 11 4.83579 11 5.25C11 5.66421 11.3358 6 11.75 6H15.25C15.6642 6 16 5.66421 16 5.25C16 4.83579 15.6642 4.5 15.25 4.5H11.75Z" fill="currentColor"/>
+<path d="M10 8.25C10 7.83579 10.3358 7.5 10.75 7.5H15.25C15.6642 7.5 16 7.83579 16 8.25C16 8.66421 15.6642 9 15.25 9H10.75C10.3358 9 10 8.66421 10 8.25Z" fill="currentColor"/>
+<path d="M8.75 10.5C8.33579 10.5 8 10.8358 8 11.25C8 11.6642 8.33579 12 8.75 12H15.25C15.6642 12 16 11.6642 16 11.25C16 10.8358 15.6642 10.5 15.25 10.5H8.75Z" fill="currentColor"/>
+</svg>
+
+  </icon-component>
+</template>
+
+<script>
+  import IconComponent from "../src/IconComponent";
+
+  export default {
+    components: {
+      IconComponent
+    }
+  }
+</script>

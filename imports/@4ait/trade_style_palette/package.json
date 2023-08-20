@@ -1,0 +1,19 @@
+{
+  "name": "@4ait/trade_style_palette",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_trade_style_palette.git"
+  },
+  "author": "Tiikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_trade_style_palette/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_trade_style_palette#readme"
+}

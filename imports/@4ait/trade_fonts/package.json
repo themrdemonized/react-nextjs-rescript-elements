@@ -1,0 +1,27 @@
+{
+  "name": "@4ait/trade_fonts",
+  "version": "1.1.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_trade_fonts.git"
+  },
+  "keywords": [
+    "trade",
+    "fonts",
+    "scss"
+  ],
+  "author": "Tiikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_trade_fonts/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_trade_fonts#readme",
+  "dependencies": {
+    "@4ait/scss_fonts_expansion": "git+https://github.com/4ait/npm_scss_fonts_expansion.git#semver:^1"
+  }
+}

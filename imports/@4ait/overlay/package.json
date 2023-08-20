@@ -1,0 +1,21 @@
+{
+  "name": "@4ait/overlay",
+  "version": "3.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_overlay.git"
+  },
+  "author": "tikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_overlay/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_overlay#readme",
+  "peerDependencies": {
+    "vue": "^3.2.20"
+  }
+}

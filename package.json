@@ -22,10 +22,6 @@
     "sass": "^1.65.1"
   },
   "devDependencies": {
-    "@4ait/icons_system": "git+https://github.com/4ait/npm_icons_system.git#semver:^4.1.0",
-    "@4ait/trade_elements": "git+https://github.com/4ait/npm_trade_elements.git#semver:^1.20.3",
-    "@4ait/trade_fonts": "git+https://github.com/4ait/npm_trade_fonts.git#semver:^1",
-    "@4ait/trade_style_palette": "git+https://github.com/4ait/npm_trade_style_palette.git#semver:^1",
     "@rescript/react": "0.11.0",
     "autoprefixer": "10.4.15",
     "css-loader": "^6.8.1",

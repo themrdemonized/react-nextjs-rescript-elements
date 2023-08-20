@@ -1,0 +1,21 @@
+@import 'imports/@4ait/scss_fonts_expansion/fonts_declare';
+
+.foura__trade_elements__elements_palette {
+
+  --4ait-elements--text-field-with-icons--default-background-color: var(--trade-style-palette_light_background_primary);
+  --4ait-elements--text-field-with-icons--default-border-color: var(--trade-style-palette_light_fill_secondary);
+  --4ait-elements--text-field-with-icons--default-hover-border-color: var(--trade-style-palette_light_fill_primary);
+
+  --4ait-elements--text-field-with-icons--focused-border-color: var(--trade-style-palette_tint_green_40);
+  --4ait-elements--text-field-with-icons--focused-box-shadow-color: var(--trade-style-palette_indicator_green_box-shadow);
+  --4ait-elements--text-field-with-icons--focused-hover-border-color: var(--trade-style-palette_tint_green_40);
+
+  --4ait-elements--text-field-with-icons--input-border-color: var(--trade-style-palette_light_background_primary);
+  --4ait-elements--text-field-with-icons--input-disabled-color: var(--trade-style-palette_light_label_tertirary);
+
+  --4ait-elements--text-field-with-icons--disabled-background-color: var(--trade-style-palette_light_fill_quaternary);
+  --4ait-elements--text-field-with-icons--disabled-color: var(--trade-style-palette_light_label_tertirary);
+
+
+  @include setFontFromAnotherFont(font-4ait-elements,text-field-with-icons-main-font, trade-font, m-body);
+}

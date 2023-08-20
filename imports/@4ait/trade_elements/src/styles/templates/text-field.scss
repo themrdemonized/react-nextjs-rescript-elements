@@ -1,0 +1,50 @@
+@import 'imports/@4ait/scss_fonts_expansion/fonts_declare';
+
+.foura__trade_elements__elements_palette
+{
+  --4ait-elements--text-field--default-border-color: var(--trade-style-palette_light_fill_secondary);
+  --4ait-elements--text-field--default-text-color: var(--trade-style-palette_light_label_primary);
+  --4ait-elements--text-field--default-background-color: var(--trade-style-palette_light_background_primary);
+
+  --4ait-elements--text-field--default-caption-color: var(--trade-style-palette_light_label_secondary);
+
+  --4ait-elements--text-field--hover-border-color: var(--trade-style-palette_light_fill_primary);
+
+  --4ait-elements--text-field--focused-border-color: var(--trade-style-palette_tint_green_40);
+  --4ait-elements--text-field--focused-box-shadow: var(--trade-style-palette_indicator_green_box-shadow);
+
+  --4ait-elements--text-field--focused-caption-color:  var(--trade-style-palette_tint_green_40);
+
+  --4ait-elements--text-field--disabled-background-color: var(--trade-style-palette_light_fill_quaternary);
+  --4ait-elements--text-field--disabled-border-color: var(--trade-style-palette_light_fill_secondary);
+  --4ait-elements--text-field--disabled-text-color: var(--trade-style-palette_light_label_secondary);
+
+  --4ait-elements--text-field--disabled-caption-text-color: var(--trade-style-palette_light_label_secondary);
+
+  --4ait-elements--text-field--error-background-color: var(--trade-style-palette_light_background_primary);
+  --4ait-elements--text-field--error-border-color: var(--trade-style-palette_tint_red_50);
+
+  --4ait-elements--text-field--error-caption-color: var(--trade-style-palette_tint_red_50);
+
+  --4ait-elements--text-field--error-hover-background-color: var(--trade-style-palette_light_background_primary);
+  --4ait-elements--text-field--error-hover-border-color: var(--trade-style-palette_tint_red_60);
+
+  --4ait-elements--text-field--error-hover-caption-color: var(--trade-style-palette_tint_red_50);
+
+  --4ait-elements--text-field--error-focused-box-shadow: var(--trade-style-palette_indicator_red_box-shadow);
+
+  --4ait-elements--text-field--error-focused-caption-color: var(--trade-style-palette_tint_red_50);
+
+  --4ait-elements--text-field--error-with-text-hover-caption-color: var(--trade-style-palette_tint_red_50);
+
+  --4ait-elements--text-field--error-disabled-border-color: var(--trade-style-palette_tint_red_90);
+  --4ait-elements--text-field--error-disabled-caption-color: var(--trade-style-palette_tint_red_50);
+  --4ait-elements--text-field--error-disabled-background-color: var(--trade-style-palette_tint_red_90-opaque);
+  --4ait-elements--text-field--error-disabled-with-text-caption-color: var(--trade-style-palette_tint_red_50);
+
+  --4ait-elements--text-field--icon-warning-color: var(--trade-style-palette_tint_red_50);
+
+  @include setFontFromAnotherFont(font-4ait-elements, caption-top, trade-font, m-caption);
+  @include setFontFromAnotherFont(font-4ait-elements, caption-default, trade-font, m-body);
+  @include setFontFromAnotherFont(font-4ait-elements, text, trade-font, m-body);
+}

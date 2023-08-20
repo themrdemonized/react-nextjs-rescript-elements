@@ -1,0 +1,27 @@
+{
+  "name": "@4ait/trade_elements",
+  "version": "1.20.17",
+  "description": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_trade_elements.git"
+  },
+  "keywords": [
+    "trade",
+    "elements"
+  ],
+  "author": "Tiikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_trade_elements/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_trade_elements#readme",
+  "dependencies": {
+    "@4ait/elements": "git+https://github.com/4ait/npm_elements.git#semver:^1.20.17",
+    "@4ait/scss_fonts_expansion": "git+https://github.com/4ait/npm_scss_fonts_expansion.git#semver:^1"
+  },
+  "peerDependencies": {
+    "vue": "^3"
+  }
+}

@@ -1,0 +1,16 @@
+@import 'imports/@4ait/scss_fonts_expansion/fonts_declare';
+
+.foura__trade_elements__elements_palette
+{
+  --4ait-elements--popover--default-background-color: var(--trade-style-palette_light_background_primary);
+
+  --4ait-elements--popover--default-border-color: var(--trade-style-palette_light_divider_opaque);
+
+  --4ait-elements--popover--default-text-color: var(--trade-style-palette_light_label_primary);
+
+  --4ait-elements--popover--default-tools-color: var(--trade-style-palette_light_label_secondary);
+
+  --4ait-elements--popover--hover-tool-color: var(--trade-style-palette_light_label_primary);
+
+  @include setFontFromAnotherFont(font-4ait-elements, content-font, trade-font, m-navigation);
+}
