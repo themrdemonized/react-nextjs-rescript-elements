@@ -1,5 +1,5 @@
 <style module lang="scss">
-    @import '~@4ait/scss_fonts_expansion/fonts_declare';
+    @import 'imports/@4ait/scss_fonts_expansion/fonts_declare';
 
     /*
         --4ait-elements--tag--color: var(--trade-style-palette_light_fill_quaternary);

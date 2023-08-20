@@ -1,6 +1,6 @@
 <style module lang="scss">
 @import "~@4ait/trade_fonts/mixin_trade_font";
-@import '~@4ait/scss_fonts_expansion/fonts_declare';
+@import 'imports/@4ait/scss_fonts_expansion/fonts_declare';
 .root
 {
   @include setFont(font-4ait-elements,text-field-with-icons-main-font);
