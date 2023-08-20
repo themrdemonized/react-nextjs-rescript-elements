@@ -14,6 +14,7 @@ module Navigation = {
         <Link href="/checkboxes"> {React.string("Checkboxes")} </Link>
         <Link href="/icons"> {React.string("Icons")} </Link>
         <Link href="/popovers"> {React.string("Popovers")} </Link>
+        <Link href="/textfields"> {React.string("TextFields")} </Link>
         <a
           
           target="_blank"

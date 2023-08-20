@@ -12,3 +12,7 @@ let filterProps = (props: ReactDOM.domProps) : ReactDOM.domProps => {
     }
     res
 }
+
+let getTradePalleteClass = () : string => {
+    "foura__trade_elements__elements_palette"
+}

@@ -8,6 +8,6 @@ let make: (
   ~tools: array<string>=?,
   ~clickTool: string => unit=?,
   ~children: React.element,
-  ~toolTemplates: array<React.element>=?,
+  ~toolsSlots: array<React.element>=?,
   ~props: ReactDOM.domProps=?,
 ) => React.element

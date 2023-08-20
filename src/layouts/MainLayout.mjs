@@ -27,6 +27,9 @@ function MainLayout$Navigation(props) {
                     }), React.createElement(Link, {
                       href: "/popovers",
                       children: "Popovers"
+                    }), React.createElement(Link, {
+                      href: "/textfields",
+                      children: "TextFields"
                     }), React.createElement("a", {
                       href: "https://github.com/ryyppy/nextjs-default",
                       target: "_blank"

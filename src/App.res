@@ -34,6 +34,13 @@ let default = (props: props): React.element => {
         content
       </div>
     </MainLayout>
+  | "/textfields" =>
+    <MainLayout>
+      <h1 > {React.string("Textfields")} </h1> 
+      <div>
+        content
+      </div>
+    </MainLayout>
   | "/icons" =>
     <MainLayout>
       <h1 > {React.string("Icons")} </h1> 

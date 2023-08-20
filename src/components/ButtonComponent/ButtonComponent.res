@@ -100,7 +100,7 @@ let make = (
   <div
     {...filteredProps}
     className={cx([
-      "foura__trade_elements__elements_palette",
+      Utils.getTradePalleteClass(),
       styles["root"],
       typeSize === L ? styles["large"] : "",
       typeSize === S ? styles["small"] : "",

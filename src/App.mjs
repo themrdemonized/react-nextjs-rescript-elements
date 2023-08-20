@@ -28,6 +28,10 @@ function $$default(props) {
         return React.createElement(MainLayout.make, {
                     children: null
                   }, React.createElement("h1", undefined, "Popovers"), React.createElement("div", undefined, content));
+    case "/textfields" :
+        return React.createElement(MainLayout.make, {
+                    children: null
+                  }, React.createElement("h1", undefined, "Textfields"), React.createElement("div", undefined, content));
     default:
       return React.createElement(MainLayout.make, {
                   children: content

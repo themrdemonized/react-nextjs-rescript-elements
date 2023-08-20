@@ -17,8 +17,13 @@ function filterProps(props) {
   return newrecord;
 }
 
+function getTradePalleteClass(param) {
+  return "foura__trade_elements__elements_palette";
+}
+
 export {
   getClassNameFromProps ,
   filterProps ,
+  getTradePalleteClass ,
 }
 /* No side effect */

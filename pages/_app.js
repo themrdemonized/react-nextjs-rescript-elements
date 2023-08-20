@@ -3,6 +3,7 @@ import "@4ait/trade_fonts/declare.scss"
 import "@4ait/trade_elements/src/styles/templates/button.scss"
 import "@4ait/trade_elements/src/styles/templates/checkbox.scss"
 import "@4ait/trade_elements/src/styles/templates/popover.scss"
+import "@4ait/trade_elements/src/styles/templates/text-field.scss"
 import 'styles/main.scss'
 
 // Note:

@@ -24,7 +24,7 @@ function $$default(param) {
                   ],
                   clickTool: c,
                   children: "Small content with tools",
-                  toolTemplates: [
+                  toolsSlots: [
                     React.createElement(IconPencil.make, {}),
                     React.createElement(IconDocOnDoc.make, {})
                   ],
@@ -49,7 +49,7 @@ function $$default(param) {
                   ],
                   clickTool: c,
                   children: "Tools: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla libero elit, porttitor nec egestas in, congue a lorem. Suspendisse vitae dolor non tortor hendrerit rhoncus. In hac habitasse platea dictumst. Sed bibendum aliquet sollicitudin. Suspendisse luctus mauris dignissim ligula dignissim porttitor. Integer ut metus facilisis, pharetra augue et, luctus tortor. Suspendisse molestie risus lorem, quis sagittis odio venenatis vel. Donec luctus commodo dolor ut sollicitudin. Cras faucibus sit amet odio vitae tincidunt. Suspendisse potenti. Proin odio nunc, hendrerit ut est eu, finibus consectetur urna. Quisque nec tincidunt eros. Cras tincidunt, lacus ac vehicula tincidunt, massa odio accumsan sem, non venenatis tortor lorem in orci.",
-                  toolTemplates: [
+                  toolsSlots: [
                     React.createElement(IconPencil.make, {}),
                     React.createElement(IconDocOnDoc.make, {})
                   ],

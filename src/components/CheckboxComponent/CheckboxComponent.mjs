@@ -95,7 +95,7 @@ function CheckboxComponent(props) {
   };
   return React.createElement("div", filteredProps, React.createElement("div", {
                   className: Cx.cx([
-                        "foura__trade_elements__elements_palette",
+                        Utils.getTradePalleteClass(undefined),
                         styles["input-wrapper"],
                         match[0] ? styles.focused : "",
                         disabled$1 ? styles.disabled : "",

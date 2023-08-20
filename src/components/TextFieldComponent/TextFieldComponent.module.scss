@@ -1,0 +1,261 @@
+@import '~@4ait/scss_fonts_expansion/fonts_declare';
+
+.root
+{
+  width: 264px;
+  height: 52px;
+}
+
+.input
+{
+  width: 100%;
+  height: 52px;
+
+  border: 1px solid var(--4ait-elements--text-field--default-border-color);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  padding: 22px 0 6px 16px;
+
+  box-sizing: border-box;
+
+  transition: all ease 0.2s;
+
+  color: var(--4ait-elements--text-field--default-text-color);
+  background: var(--4ait-elements--text-field--default-background-color);
+
+  // Fixes safari iOS drop-shadow
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  // Force autofilled as with text
+  &:-webkit-autofill + .caption
+  {
+    top: 6px;
+    transform: none;
+
+    @include setFont(font-4ait-elements, caption-top);
+  }
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
+
+.input-wrapper
+{
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  &:hover
+  {
+    .input
+    {
+      border: 1px solid var(--4ait-elements--text-field--hover-border-color);
+    }
+  }
+}
+
+.focused
+{
+  .input
+  {
+    border: 1px solid var(--4ait-elements--text-field--focused-border-color);
+    box-shadow: var(--4ait-elements--text-field--focused-box-shadow);
+  }
+
+  .caption
+  {
+    top: 6px;
+    transform: none;
+    color: var(--4ait-elements--text-field--focused-caption-color);
+
+    @include setFont(font-4ait-elements, caption-top);
+  }
+
+  &:hover
+  {
+    .input
+    {
+      border: 1px solid var(--4ait-elements--text-field--focused-border-color);
+    }
+  }
+}
+
+.with-text
+{
+  .caption
+  {
+    top: 6px;
+    transform: none;
+
+    @include setFont(font-4ait-elements, caption-top);
+  }
+}
+
+.disabled
+{
+  .input
+  {
+    background: var(--4ait-elements--text-field--disabled-background-color);
+    border: 1px solid var(--4ait-elements--text-field--disabled-border-color);
+    color: var(--4ait-elements--text-field--disabled-text-color);
+  }
+
+  .caption
+  {
+    color: var(--4ait-elements--text-field--disabled-caption-text-color);
+  }
+}
+
+.error
+{
+  .input
+  {
+    background: var(--4ait-elements--text-field--error-background-color);
+    transition: all ease 0.2s, padding-right 0s;
+    padding-right: 32px + 8px;
+    border: 1px solid var(--4ait-elements--text-field--error-border-color);
+  }
+
+  .caption
+  {
+    color: var(--4ait-elements--text-field--error-caption-color);
+  }
+
+  .icon-warning
+  {
+    display: inline-block;
+  }
+
+  &:hover
+  {
+    .input
+    {
+      background: var(--4ait-elements--text-field--error-hover-background-color);
+      border: 1px solid var(--4ait-elements--text-field--error-hover-border-color);
+    }
+
+    .caption
+    {
+      color: var(--4ait-elements--text-field--error-hover-caption-color);
+    }
+  }
+
+  &.focused
+  {
+    .input
+    {
+      box-shadow: var(--4ait-elements--text-field--error-focused-box-shadow);
+    }
+
+    .caption
+    {
+      color: var(--4ait-elements--text-field--error-focused-caption-color);
+    }
+  }
+
+  &.with-text
+  {
+    &:hover
+    {
+      .caption
+      {
+        color: var(--4ait-elements--text-field--error-with-text-hover-caption-color);
+      }
+    }
+  }
+
+  .disabled
+  {
+    .input
+    {
+      border: 1px solid var(--4ait-elements--text-field--error-disabled-border-color);
+      background: var(--4ait-elements--text-field--error-disabled-background-color);
+    }
+
+    .caption
+    {
+      color: var(--4ait-elements--text-field--error-disabled-caption-color);
+    }
+
+    &:hover
+    {
+      .input
+      {
+        background: var(--4ait-elements--text-field--error-disabled-background-color);
+      }
+    }
+
+    &.with-text
+    {
+      .input
+      {
+        background: var(--4ait-elements--text-field--error-disabled-background-color);
+      }
+
+      .caption
+      {
+        color: var(--kr-color-feedback-error-2);
+      }
+    }
+  }
+}
+
+.caption
+{
+  color: var(--4ait-elements--text-field--default-caption-color);
+
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  pointer-events: none;
+  user-select: none;
+
+  transition: all ease 0.2s;
+
+  @include setFont(font-4ait-elements, caption-default);
+}
+
+.group-icon
+{
+  position: absolute;
+  top: 50%;
+  right: 16px - 4px;
+
+  height: 16px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.icon-status
+{
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+
+  margin-right: 4px;
+}
+
+.icon-warning
+{
+  color: var(--4ait-elements--text-field--icon-warning-color);
+  display: none;
+}

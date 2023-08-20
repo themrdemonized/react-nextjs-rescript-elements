@@ -11,7 +11,7 @@ let make = (
   ~tools: array<string>=[],
   ~clickTool: (string) => ()=(_) => (),
   ~children,
-  ~toolTemplates: array<React.element>=[],
+  ~toolsSlots: array<React.element>=[],
   
   ~props: ReactDOM.domProps={}
   ) => {
@@ -27,7 +27,7 @@ let make = (
         ->Belt.Array.flatMap((el) => ["divider", el])
         ->Belt.Array.sliceToEnd(1)
 
-    let toolTemplatesWithDivider = toolTemplates
+    let toolsSlotsWithDivider = toolsSlots
         ->Belt.Array.flatMap((el) => [React.null, el])
         ->Belt.Array.sliceToEnd(1)
 
@@ -47,7 +47,7 @@ let make = (
                             onClick={_ => handleClick(el)}
                             key={Belt.Int.toString(index)}
                         >
-                            {toolTemplatesWithDivider[index]}
+                            {toolsSlotsWithDivider[index]}
                         </div>
                 }
                 res
@@ -62,7 +62,7 @@ let make = (
     <div
         {...filteredProps}
         className={cx([
-            "foura__trade_elements__elements_palette",
+            Utils.getTradePalleteClass(),
             styles["root"],
             hasTools ? styles["root-with-tools"] : "",
             className

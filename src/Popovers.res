@@ -19,7 +19,7 @@ let default = () => {
         "edit",
         "copy"
       ]}
-      toolTemplates={[
+      toolsSlots={[
         <IconPencil />,
         <IconDocOnDoc />
       ]}
@@ -42,7 +42,7 @@ let default = () => {
         "edit",
         "copy"
       ]}
-      toolTemplates={[
+      toolsSlots={[
         <IconPencil />,
         <IconDocOnDoc />
       ]}

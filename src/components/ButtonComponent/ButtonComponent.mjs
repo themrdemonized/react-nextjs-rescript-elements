@@ -88,7 +88,7 @@ function ButtonComponent(props) {
   };
   var newrecord = Caml_obj.obj_dup(filteredProps);
   return React.createElement("div", (newrecord.className = Cx.cx([
-                    "foura__trade_elements__elements_palette",
+                    Utils.getTradePalleteClass(undefined),
                     styles.root,
                     typeSize$1 === /* L */0 ? styles.large : "",
                     typeSize$1 === /* S */1 ? styles.small : "",

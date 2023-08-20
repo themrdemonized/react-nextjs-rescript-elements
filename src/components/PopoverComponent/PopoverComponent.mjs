@@ -13,14 +13,14 @@ var styles = PopoverComponentModuleScss;
 
 function PopoverComponent(props) {
   var props$1 = props.props;
-  var toolTemplates = props.toolTemplates;
+  var toolsSlots = props.toolsSlots;
   var clickTool = props.clickTool;
   var tools = props.tools;
   var tools$1 = tools !== undefined ? tools : [];
   var clickTool$1 = clickTool !== undefined ? clickTool : (function (param) {
         
       });
-  var toolTemplates$1 = toolTemplates !== undefined ? toolTemplates : [];
+  var toolsSlots$1 = toolsSlots !== undefined ? toolsSlots : [];
   var props$2 = props$1 !== undefined ? props$1 : ({});
   var className = Utils.getClassNameFromProps(props$2);
   var filteredProps = Utils.filterProps(props$2);
@@ -31,7 +31,7 @@ function PopoverComponent(props) {
                       el
                     ];
             })), 1);
-  var toolTemplatesWithDivider = Belt_Array.sliceToEnd(Belt_Array.flatMap(toolTemplates$1, (function (el) {
+  var toolsSlotsWithDivider = Belt_Array.sliceToEnd(Belt_Array.flatMap(toolsSlots$1, (function (el) {
               return [
                       null,
                       el
@@ -52,7 +52,7 @@ function PopoverComponent(props) {
                           onClick: (function (param) {
                               Curry._1(clickTool$1, el);
                             })
-                        }, Caml_array.get(toolTemplatesWithDivider, index));
+                        }, Caml_array.get(toolsSlotsWithDivider, index));
             }
           }));
     toolsEl = React.createElement("div", {
@@ -63,7 +63,7 @@ function PopoverComponent(props) {
   }
   var newrecord = Caml_obj.obj_dup(filteredProps);
   return React.createElement("div", (newrecord.className = Cx.cx([
-                    "foura__trade_elements__elements_palette",
+                    Utils.getTradePalleteClass(undefined),
                     styles.root,
                     hasTools ? styles["root-with-tools"] : "",
                     className

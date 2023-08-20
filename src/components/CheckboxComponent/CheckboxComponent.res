@@ -74,7 +74,7 @@ let make = (
     >
         <div
             className={cx([
-                "foura__trade_elements__elements_palette",
+                Utils.getTradePalleteClass(),
                 styles["input-wrapper"],
                 isFocused ? styles["focused"] : "",
                 disabled ? styles["disabled"] : "",

@@ -1367,6 +1367,11 @@ rescript-classnames@^6.0.0:
   resolved "https://registry.yarnpkg.com/rescript-classnames/-/rescript-classnames-6.0.0.tgz#e833d9fc88e0e494c2ef39862721a80ab75fae32"
   integrity sha512-hfOffijzIPnULtRZW3Kf0DCfCaw9lhGaMxf81WYlREieyBS2KNMcdI/8g5uSXFj0j4Ci21xkf70EFCKjuCTqpw==
 
+rescript-webapi@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/rescript-webapi/-/rescript-webapi-0.8.0.tgz#35b76362ed6a32980fdf104dd8300b0703d424ca"
+  integrity sha512-PdjHqho8+kI7AIC3DlLgD99H8zzHphzpIhyv2skVtWaSJGK819+ZqWMC3mHEtSjlcFoYaLXliNt8sb6Taa2Mpg==
+
 rescript@10.1.4:
   version "10.1.4"
   resolved "https://registry.yarnpkg.com/rescript/-/rescript-10.1.4.tgz#0f37710d371f32a704f17b4e804f66ce3c79a305"
