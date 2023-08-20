@@ -114,3 +114,4 @@ If you want to opt-out, feel free to remove all compiled `.mjs` files within the
 ### How trustworthy is this template?
 
 This template was created through our learnings of building the [ReScript Documentation Platform](https://rescript-lang.org) (which is built in NextJS), and is maintained by one of the ReScript core team members. It irregularly receives updates depending on demand and urgency (e.g. important changes in the `Next.res` bindings, or package dependencies).
+
