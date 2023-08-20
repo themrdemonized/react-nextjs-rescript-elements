@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import '~@4ait/scss_fonts_expansion/fonts_declare';
+
+$baseFonts: Helvetica, Segoe UI, sans-serif;
+
+@function fontFamily($name) {
+  @return $name, $baseFonts;
+}
+
+@mixin declareTradeFont($fontName,
+                          $fontFamily,
+                          $fontStyle,
+                          $fontWeight,
+                          $fontSize,
+                          $fontLineHeight,
+                          $fontLetterSpacing)
+{
+  @include declareGlobalFont(trade-font, $fontName,
+          $fontFamily,
+          $fontStyle,
+          $fontWeight,
+          $fontSize,
+          $fontLineHeight,
+          $fontLetterSpacing)
+}
+
+/*
+  fontName,
+  fontFamily, fontStyle, fontWeight, fontSize, fontLineHeight, fontLetterSpacing
+*/
+
+/*                     M                             */
+@include declareTradeFont(
+                m-h1,
+                fontFamily(Roboto), normal, 500, 64px, 64px, -0.25px);
+
+@include declareTradeFont(
+                m-h2,
+                fontFamily(Roboto), normal, 500, 40px, 52px, -0.25px);
+
+@include declareTradeFont(
+                m-h3,
+                fontFamily(Roboto), normal, 500, 24px, 32px, inherit);
+
+@include declareTradeFont(
+                m-h4,
+                fontFamily(Roboto), normal, 500, 16px, 24px, 0.2px);
+
+@include declareTradeFont(
+                m-body,
+                fontFamily(Roboto), normal, normal, 16px, 24px, inherit);
+
+@include declareTradeFont(
+                m-navigation,
+                fontFamily(Roboto), normal, normal, 14px, 20px, inherit);
+
+@include declareTradeFont(
+                m-caption,
+                fontFamily(Roboto), normal, normal, 12px, 16px, 0.02em);
+
+
+/*           asS           */
+@include declareTradeFont(
+                s-h2,
+                fontFamily(Roboto), normal, 500, 28px, 36px, inherit);
+
+@include declareTradeFont(
+                s-h3,
+                fontFamily(Roboto), normal, 500, 18px, 28px, inherit);
+
+@include declareTradeFont(
+                s-h4,
+                fontFamily(Roboto), normal, 500, 14px, 20px, 0.2px);
+
+@include declareTradeFont(
+                s-body,
+                fontFamily(Roboto), normal, normal, 14px, 20px, inherit);
+
+@include declareTradeFont(
+                s-caption,
+                fontFamily(Roboto), normal, 500, 10px, 14px, 0.02em);

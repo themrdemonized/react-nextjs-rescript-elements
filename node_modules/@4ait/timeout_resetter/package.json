@@ -1,0 +1,22 @@
+{
+  "name": "@4ait/timeout_resetter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/TimeoutResetter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_timeout_resetter.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Tiikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_timeout_resetter/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_timeout_resetter#readme"
+}

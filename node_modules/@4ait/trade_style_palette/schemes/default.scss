@@ -1,0 +1,105 @@
+.trade-style-palette_scheme_default
+{
+  // --------    Light   --------
+
+  // ----[Background]----
+  --trade-style-palette_light_background_primary: #FFFFFF;
+  --trade-style-palette_light_background_secondary: #F2F3F6;
+
+  // ----[Divider]----
+  --trade-style-palette_light_divider_non-opaque: #CDCED1;
+  --trade-style-palette_light_divider_opaque: #2F30403D;
+
+  // ----[Fill]----
+  --trade-style-palette_light_fill_primary: #78788033;
+  --trade-style-palette_light_fill_secondary: #78788029;
+  --trade-style-palette_light_fill_tertiary: #7676801F;
+  --trade-style-palette_light_fill_quaternary: #60637314;
+
+  // ----[Label]----
+  --trade-style-palette_light_label_primary: #000000;
+  --trade-style-palette_light_label_secondary: #2F304099;
+  --trade-style-palette_light_label_tertirary: #2F30404D;
+  --trade-style-palette_light_label_quarternary: #2F30401F;
+
+  // --------    Dark   --------
+
+  // ----[Background]----
+  --trade-style-palette_dark_background_primary: #1C1C1E;
+  --trade-style-palette_dark_background_secondary: #000000;
+
+  // ----[Divider]----
+  --trade-style-palette_dark_divider_non-opaque: #38383A;
+  --trade-style-palette_dark_divider_opaque: #545458A6;
+
+  // ----[Fill]----
+  --trade-style-palette_dark_fill_primary: #7878805C;
+  --trade-style-palette_dark_fill_secondary: #77778052;
+  --trade-style-palette_dark_fill_tertiary: #7676803D;
+  --trade-style-palette_dark_fill_quaternary: #7171802E;
+
+  // ----[Label]----
+  --trade-style-palette_dark_label_primary: #FFFFFF;
+  --trade-style-palette_dark_label_secondary: #F2F4FCA3;
+  --trade-style-palette_dark_label_tertirary: #D8D8E54D;
+  --trade-style-palette_dark_label_quarternary: #D8D8E54D;
+
+  // --------    Tint   --------
+
+  // ----[Red]----
+  --trade-style-palette_tint_red_40: #AE0F2F;
+  --trade-style-palette_tint_red_50: #ED1C46;
+  --trade-style-palette_tint_red_60: #F45C52;
+  --trade-style-palette_tint_red_80-opaque: #F4685270;
+  --trade-style-palette_tint_red_90-opaque: #F468521F;
+
+  // ----[Orange]----
+  --trade-style-palette_tint_orange_30: #843A15;
+  --trade-style-palette_tint_orange_50: #F66E0A;
+  --trade-style-palette_tint_orange_70: #FFB452;
+  --trade-style-palette_tint_orange_80-opaque: #FFB45270;
+  --trade-style-palette_tint_orange_90-opaque: #FFB4521F;
+
+  // ----[Yellow]----
+  --trade-style-palette_tint_yellow_30: #7E622A;
+  --trade-style-palette_tint_yellow_50: #FFCC00;
+  --trade-style-palette_tint_yellow_70: #FFE866;
+  --trade-style-palette_tint_yellow_80-opaque: #FFD63370;
+  --trade-style-palette_tint_yellow_90-opaque: #FFD6331F;
+
+  // ----[Green]----
+  --trade-style-palette_tint_green_30: #26735E;
+  --trade-style-palette_tint_green_40: #18B44C;
+  --trade-style-palette_tint_green_50: #6BC624;
+  --trade-style-palette_tint_green_80-opaque: #90D12E5C;
+  --trade-style-palette_tint_green_90-opaque: #90D12E1F;
+
+  // ----[Blue]----
+  --trade-style-palette_tint_blue_30: #0F3580;
+  --trade-style-palette_tint_blue_50: #0080FF;
+  --trade-style-palette_tint_blue_60: #35BAFD;
+  --trade-style-palette_tint_blue_80-opaque: #35BAFD66;
+  --trade-style-palette_tint_blue_90-opaque: #35BAFD1F;
+
+  // ----[Indigo]----
+  --trade-style-palette_tint_indigo_30: #40377B;
+  --trade-style-palette_tint_indigo_50: #8008F7;
+  --trade-style-palette_tint_indigo_70: #8771F4;
+  --trade-style-palette_tint_indigo_80-opaque: #8771F470;
+  --trade-style-palette_tint_indigo_90-opaque: #8771F41F;
+
+  // --------    Indicator   --------
+
+  --trade-style-palette_indicator_red_box-shadow: 0px 0px 0px 3px rgba(210, 0, 4, 0.16);
+  --trade-style-palette_indicator_orange_box-shadow: 0px 0px 0px 3px rgba(255, 180, 82, 0.24);
+  --trade-style-palette_indicator_yellow_box-shadow: 0px 0px 0px 3px rgba(255, 214, 51, 0.24);
+  --trade-style-palette_indicator_green_box-shadow: 0px 0px 0px 3px rgba(25, 194, 45, 0.32);
+  --trade-style-palette_indicator_blue_box-shadow: 0px 0px 0px 3px rgba(0, 128, 255, 0.3);
+  --trade-style-palette_indicator_indigo_box-shadow: 0px 0px 0px 3px rgba(128, 8, 247, 0.24);
+
+  // --------    Shadow   --------
+
+  --trade-style-palette_shadow_1dp_box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 2px 12px rgba(0, 0, 0, 0.04);
+  --trade-style-palette_shadow_2dp_box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
+  --trade-style-palette_shadow_3dp_box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08), 0px 12px 64px rgba(0, 0, 0, 0.12);
+}

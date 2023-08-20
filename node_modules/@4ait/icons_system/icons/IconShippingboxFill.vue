@@ -1,0 +1,21 @@
+<template>
+  <icon-component>
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.2256 2.88715L10.1731 5.79226L8.00769 6.6855L1.92136 4.03927L4.2256 2.88715Z" fill="currentColor"/>
+<path d="M5.91447 2.04271L7.32918 1.33536C7.75147 1.12422 8.24853 1.12422 8.67082 1.33536L14.217 4.10847L12.0238 5.02688L5.91447 2.04271Z" fill="currentColor"/>
+<path d="M15 5.40681L12.286 6.54329L8.75 8.0019V15.1785L14.0909 12.8896C14.6424 12.6532 15 12.1109 15 11.5109V5.40681Z" fill="currentColor"/>
+<path d="M7.25 15.1785V7.99171L1 5.27432V11.5109C1 12.1109 1.35759 12.6532 1.90912 12.8896L7.25 15.1785Z" fill="currentColor"/>
+</svg>
+
+  </icon-component>
+</template>
+
+<script>
+  import IconComponent from "../src/IconComponent";
+
+  export default {
+    components: {
+      IconComponent
+    }
+  }
+</script>

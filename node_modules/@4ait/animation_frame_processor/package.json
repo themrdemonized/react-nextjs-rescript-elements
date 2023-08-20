@@ -1,0 +1,19 @@
+{
+  "name": "@4ait/animation_frame_processor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "AnimationFrameProcessor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_animation_frame_processor.git"
+  },
+  "author": "Tiikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_animation_frame_processor/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_animation_frame_processor#readme"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@4ait/focus_prevent_scroll_polyfill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4ait/npm_focus_prevent_scroll_polyfill.git"
+  },
+  "author": "Tikara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4ait/npm_focus_prevent_scroll_polyfill/issues"
+  },
+  "homepage": "https://github.com/4ait/npm_focus_prevent_scroll_polyfill#readme"
+}

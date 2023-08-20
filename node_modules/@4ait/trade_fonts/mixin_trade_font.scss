@@ -1,0 +1,5 @@
+@import '~@4ait/scss_fonts_expansion/fonts_declare';
+
+@mixin tradeFont($fontName) {
+  @include setFont(trade-font, $fontName);
+}
